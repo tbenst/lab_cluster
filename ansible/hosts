@@ -1,0 +1,8 @@
+[corei3]
+172.16.37.141:2424      ansible_user=vangelderlab
+172.16.37.157:2424      ansible_user=vangelderlab
+172.16.37.82:2424       ansible_user=vangelderlab
+
+[athlonx2]
+172.16.37.25:2424       ansible_user=vangelderlab
+172.16.37.42:2424       ansible_user=vangelderlab
