@@ -1,0 +1,9 @@
+---
+- hosts: "{{ hosts }}"
+  remote_user: vangelderlab
+  become: yes
+  become_method: sudo
+  
+  tasks:
+    - command: /sbin/shutdown -r now
+    - debug: msg="System {{ inventory_hostname }} has ip {{ ansible_host }}"

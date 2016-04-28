@@ -1,0 +1,9 @@
+- name: consul container
+  docker:
+    name: consul
+    image: progrium/consul
+    command: "-server -bootstrap"
+    state: started
+    ports:
+      - 8500:8500
+- ufw: rule=allow port=8500 proto=tcp

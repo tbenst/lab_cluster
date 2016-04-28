@@ -1,30 +1,4 @@
 ---
-- hosts: all
-  remote_user: vangelderlab
-  become: yes
-  become_method: sudo
-  
-  tasks:
-  # https://docs.docker.com/engine/installation/linux/debian/#debian-jessie-80-64-bit
-
-  - name: Updating Apt repository
-    apt: update_cache=yes
-  - name: Updating distribution
-    apt: upgrade=dist
-  - apt: name=apt-transport-https state=latest
-  - apt: name=ca-certificates state=latest
-  - apt_key: keyserver=hkp://p80.pool.sks-keyservers.net:80 id=58118E89F3A912897C070ADBF76221572C52609D
-  - file: path=/etc/apt/sources.list.d/ state=directory
-  - name: Copying docker list for Debian Jessie
-    copy: src=etc/docker.list dest=/etc/apt/sources.list.d/docker.list
-  
-  # Install Docker
-  - apt: update_cache=yes
-  - apt: name=docker-engine state=latest
-
-
-  # - name: Setup firewall
-  - apt: name=ufw state=latest
-  - ufw: rule=allow port=2376 proto=tcp
-  - ufw: rule=limit port=2424 proto=tcp
-  - ufw: state=enabled
+- include: common.yml
+- include: consuls.yml
+- include: managers.yml

@@ -1,0 +1,1 @@
+consul0_ip: "{{ hostvars[groups['consul0'][0]]['ansible_eth0']['ipv4']['address']}}"
