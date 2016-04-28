@@ -1,8 +1,4 @@
-- debug: "msg={{ manager0_ip }}"
-- name: swarm manager container
-  docker:
-    name: manager
-    image: swarm
-    docker_url: ":4000"
-    command: "--replication advertise {{manager0_ip}}:4000 
-      consul://{{consul0_ip}}:8500"
+- name: open port 2375 for swarm manager
+  ufw: rule=allow port=2375 proto=tcp
+- name: open port 3375 for swarm manager
+  ufw: rule=allow port=3375 proto=tcp

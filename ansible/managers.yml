@@ -2,7 +2,25 @@
 - hosts: manager0
   roles:
     - managers
+  tasks:
+    - name: Launching swarm manager0 containter
+      docker:
+        name: manager0
+        image: swarm
+        command: "manage -H :4000 --replication --advertise {{manager0_ip}}:4000 consul://{{consul0_ip}}:8500"
+        state: reloaded
+        count: 1
+        ports:
+          - 4000:4000
 
-# - hosts: manager1
-#   roles:
-#     - managers
+- hosts: manager1
+  roles:
+    - managers
+  tasks:
+    - name: Launching swarm manager1 containter
+      docker:
+        name: manager1
+        image: swarm
+        command: "manage -H :4000 --replication --advertise {{manager1_ip}}:4000 consul://{{consul0_ip}}:8500"
+        state: reloaded
+        count: 1

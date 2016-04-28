@@ -41,6 +41,5 @@
 
 # - name: Setup firewall
 - apt: name=ufw state=latest
-- ufw: rule=allow port=2376 proto=tcp
 - ufw: rule=limit port=2424 proto=tcp
 - ufw: state=enabled

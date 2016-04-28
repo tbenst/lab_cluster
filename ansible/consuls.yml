@@ -1,4 +1,4 @@
 ---
-- hosts: consuls
+- hosts: consul0
   roles:
     - consuls

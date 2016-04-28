@@ -1,0 +1,10 @@
+- ufw: rule=allow port=2375 proto=tcp
+- debug: msg="{{ ansible_eth0['ipv4']['address'] }}"
+- command: /bin/echo "{{ ansible_eth0['ipv4']['address'] }}"
+- name: Join swarm
+  docker:
+    name: swarm
+    image: swarm
+    command: "join --advertise={{ ansible_eth0['ipv4']['address'] }}:2375 consul://{{consul0_ip}}:8500"
+    state: reloaded
+    count: 1

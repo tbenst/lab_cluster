@@ -2,3 +2,4 @@
 - include: common.yml
 - include: consuls.yml
 - include: managers.yml
+- include: workers.yml

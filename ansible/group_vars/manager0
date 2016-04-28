@@ -1,1 +1,0 @@
-manager0_ip: "{{ hostvars[groups['manager0'][0]]['ansible_eth0']['ipv4']['address']}}"
