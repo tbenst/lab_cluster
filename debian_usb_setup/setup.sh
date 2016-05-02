@@ -2,9 +2,9 @@
 cd /mnt/usb/debian_usb_setup
 cp sshd_config /etc/ssh/sshd_config
 mkdir -p /home/vangelderlab/.ssh
-cat master_rsa.pub >> ~/.ssh/authorized_keys
-chown -R vangelderlab ~/.ssh
-chmod 600 ~/.ssh/authorized_keys
+cp /mnt/usb/debian_usb_setup/master_rsa.pub /home/vangelderlab/.ssh/authorized_keys
+chown -R vangelderlab /home/vangelderlab/.ssh
+chmod 600 /home/vangelderlab/.ssh/authorized_keys
 systemctl restart ssh
 apt-get -y update
 apt-get -y upgrade

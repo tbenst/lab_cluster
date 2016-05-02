@@ -1,0 +1,41 @@
+# TODO remove
+- name: removing certificates
+  file: "path={{ca_dir}} state=absent"
+
+- name: Create certificate-authority directory
+  file: "path={{ca_dir}} state=directory"
+- set_fact: "san_ip={{ansible_host}}"
+
+- name: Making openssl.cfg from template
+  template: "src=openssl.cfg.j2 dest={{ca_dir}}/openssl.cfg"
+
+- name: Generating CA private key
+  command: "/usr/bin/openssl genrsa -out {{ca_dir}}/ca-priv-key.pem 2048
+    creates={{ca_dir}}/ca-priv-key.pem"
+  notify: generate all keys
+
+- name: Generating CA public key
+  # http://security.stackexchange.com/questions/74345/provide-subjectaltname-to-openssl-directly-on-command-line
+  shell: "/usr/bin/openssl req -new
+    -key {{ca_dir}}/ca-priv-key.pem
+    -x509 -days 1825
+    -subj '/C=US/ST=WA/O=UW Medicine/CN={{ inventory_hostname }}'
+    -config {{ca_dir}}/openssl.cfg
+    -out {{ca_dir}}/ca.pem
+    creates={{ca_dir}}/ca.pem"
+
+- name: Check if {{ item }} is missing certs
+  file: "path={{ca_dir}}/{{item}} state=directory"
+  # notify: generate key node_name={{ item }}
+  with_items: "{{groups['all']}}"
+  register: cert_status
+
+- name: Generate missing cert for {{ item.item }}
+  # TODO deprecation warning -- cert_status(.results?) is sometimes undefined
+  include: "create-key.yml node_name={{item.item}} work_dir={{ca_dir}}/{{item.item}}"
+  with_items: "{{cert_status.results}}"
+  when: item.changed
+
+- name: Fetch certs from CA
+  synchronize: "mode=pull src={{ca_dir}}/ dest=../files"
+  become: no

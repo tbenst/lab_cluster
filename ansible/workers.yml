@@ -2,3 +2,4 @@
 - hosts: workers
   roles:
     - workers
+  tags: docker

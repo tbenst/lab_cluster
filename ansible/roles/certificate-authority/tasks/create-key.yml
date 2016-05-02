@@ -1,0 +1,31 @@
+- set_fact: "node_ip={{hostvars[node_name]['ansible_eth0']['ipv4']['address']}}"
+- set_fact: "san_ip={{node_ip}}"
+- name: Making openssl.cfg from template
+  # TODO change template..for CA now
+  template: "src=openssl.cfg.j2 dest={{ca_dir}}/openssl.cfg"
+
+- name: "Create directory for {{ node_name }}"
+  file: "path={{work_dir}} state=directory"
+
+- name: "create private key for {{ node_name }}"
+  command: "/usr/bin/openssl genrsa -out
+    {{work_dir}}/{{node_name}}-priv-key.pem 2048"
+
+- name: create signing request for {{ node_name }}
+  shell: "/usr/bin/openssl req -new
+    -key {{work_dir}}/{{node_name}}-priv-key.pem
+    -subj '/C=US/ST=WA/O=UW Medicine/CN={{ node_name }}'
+    -config {{ca_dir}}/openssl.cfg
+    -out {{work_dir}}/{{node_name}}.csr"
+
+- name: "create certificate for {{ node_name }}"
+  command: "/usr/bin/openssl x509 -req -days 1825 -in
+    {{work_dir}}/{{node_name}}.csr -CA {{ca_dir}}/ca.pem -CAkey
+    {{ca_dir}}/ca-priv-key.pem -CAcreateserial -out
+    {{work_dir}}/{{node_name}}-cert.pem
+    -extensions v3_req -extfile {{ca_dir}}/openssl.cfg"
+
+- name: create key pair
+  # suggested by https://docs.docker.com/swarm/configure-tls/#step-3-create-and-sign-keys
+  command: "openssl rsa -in {{work_dir}}/{{node_name}}-priv-key.pem -out
+    {{work_dir}}/{{node_name}}-priv-key.pem"

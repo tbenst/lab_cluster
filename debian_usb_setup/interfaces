@@ -8,23 +8,6 @@ auto lo
 iface lo inet loopback
 
 # The primary network interface
-allow-hotplug eth0
-iface eth0 inet static
-    address 172.16.37.141
-    netmask 255.255.254.0
-    gateway 172.16.36.1 
-vangelderlab@macklemore:~$ sudo vi /etc/network/interfaces
-[sudo] password for vangelderlab: 
-vangelderlab@macklemore:~$ cat /etc/network/interfaces                                                
-# This file describes the network interfaces available on your system
-# and how to activate them. For more information, see interfaces(5).
-
-source /etc/network/interfaces.d/*
-
-# The loopback network interface
-auto lo
-iface lo inet loopback
-
-# The primary network interface
+auto eth0
 allow-hotplug eth0
 iface eth0 inet static

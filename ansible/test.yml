@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  remote_user: vangelderlab
   
   tasks:
     - debug: msg="System {{ inventory_hostname }} has ip {{ ansible_host }}"

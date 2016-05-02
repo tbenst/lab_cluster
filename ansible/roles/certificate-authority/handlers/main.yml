@@ -1,0 +1,5 @@
+- name: generate all keys
+  include: "create-key.yml node_name={{item}} work_dir={{ca_dir}}/{{item}}"
+  with_items: "{{groups['all']}}"
+- name: generate key
+  include: "create-key.yml node_name={{node_name}} work_dir={{ca_dir}}/{{node_name}}"

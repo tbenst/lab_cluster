@@ -1,10 +1,28 @@
 - ufw: rule=allow port=2375 proto=tcp
-- debug: msg="{{ ansible_eth0['ipv4']['address'] }}"
-- command: /bin/echo "{{ ansible_eth0['ipv4']['address'] }}"
+
+# TODO add following options to DOCKER_OPTS line of /etc/default/docker
+# -H tcp://0.0.0.0:2376 --tlsverify --tlscacert=/home/ubuntu/.certs/ca.pem --tlscert=/home/ubuntu/.certs/cert.pem --tlskey=/home/ubuntu/.certs/key.pem
+# may no longer need this manual socket stuff..? security hole anyway
+- name: Adding 2375/tcp socket
+  copy: src=docker-tcp.socket dest=/etc/systemd/system/
+- name: Boot with Docker tcp socket
+  service: name=docker-tcp.socket enabled=yes
+- name: Stopping Docker
+  service: name=docker state=stopped
+- name: Restart Docker tcp socket
+  service: name=docker-tcp.socket state=restarted
+- name: Starting Docker
+  service: name=docker state=started
+
 - name: Join swarm
+  tags: drone
   docker:
     name: swarm
     image: swarm
-    command: "join --advertise={{ ansible_eth0['ipv4']['address'] }}:2375 consul://{{consul0_ip}}:8500"
+    command: "join --advertise={{ ansible_host }}:2375 consul://{{consul0_ip}}:8500"
     state: reloaded
     count: 1
+    use_tls: verify
+    tls_ca_cert: "{{cert_dir}}/ca.pem"
+    tls_client_cert: "{{cert_dir}}/cert.pem"
+    tls_client_key: "{{cert_dir}}/key.pem"

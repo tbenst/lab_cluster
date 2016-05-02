@@ -1,0 +1,8 @@
+[managers]
+daft-punk   ansible_host=192.168.29.242
+
+[certificate-authority]
+daft-punk
+
+[consul0]
+daft-punk

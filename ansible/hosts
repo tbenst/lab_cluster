@@ -10,12 +10,12 @@ soundgarden     ansible_host=172.16.37.42
 [consul0]
 jimi-hendrix
 
-[manager0]
+[managers]
 jimi-hendrix
-
-[manager1]
 soundgarden
 
-[workers]
-pearl-jam
-nirvana
+[certificate-authority]
+jimi-hendrix
+
+[workers:children]
+corei3

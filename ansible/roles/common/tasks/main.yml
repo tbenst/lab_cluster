@@ -1,6 +1,6 @@
 # https://docs.docker.com/engine/installation/linux/debian/#debian-jessie-80-64-bit
 - copy: src=.bash_profile dest=/root
-- copy: src=.bash_profile dest=/home/vangelderlab
+- copy: "src=.bash_profile dest=/home/{{ansible_user}}"
 
 - name: Updating Apt repository
   apt: update_cache=yes
@@ -19,6 +19,7 @@
   template: src=interfaces.j2 dest=/etc/network/interfaces
   notify:
     - restart networking
+
 - apt_key: keyserver=hkp://p80.pool.sks-keyservers.net:80 id=58118E89F3A912897C070ADBF76221572C52609D
 - file: path=/etc/apt/sources.list.d/ state=directory
 - name: Copying docker list for Debian Jessie
@@ -43,3 +44,18 @@
 - apt: name=ufw state=latest
 - ufw: rule=limit port=2424 proto=tcp
 - ufw: state=enabled
+
+- name: Make directory for certs
+  file: "path={{cert_dir}} state=directory"
+- name: Transfer CA cert
+  copy:
+    src: "{{ca_filepath}}/ca.pem"
+    dest: "{{cert_dir}}/"
+- name: Transfer node's public cert
+  copy: 
+    src: "{{ca_filepath}}/{{inventory_hostname}}/{{inventory_hostname}}-cert.pem"
+    dest: "{{cert_dir}}/cert.pem"
+- name: Transfer node's private key
+  copy: 
+    src: "{{ca_filepath}}/{{inventory_hostname}}/{{inventory_hostname}}-priv-key.pem"
+    dest: "{{cert_dir}}/key.pem"

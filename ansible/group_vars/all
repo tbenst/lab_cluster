@@ -1,5 +1,5 @@
 ansible_port: 2424
 ansible_user: vangelderlab
 consul0_ip: "{{ hostvars[groups['consul0'][0]]['ansible_eth0']['ipv4']['address']}}"
-manager0_ip: "{{ hostvars[groups['manager0'][0]]['ansible_eth0']['ipv4']['address']}}"
-manager1_ip: "{{ hostvars[groups['manager1'][0]]['ansible_eth0']['ipv4']['address']}}"
+ca_dir: "/home/{{ansible_user}}/certificate-authority"
+cert_dir: "/home/{{ansible_user}}/.certs"
