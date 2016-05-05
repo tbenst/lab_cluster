@@ -1,0 +1,3 @@
+[Service]
+ExecStart= 
+ExecStart=/usr/bin/docker daemon -H=0.0.0.0:2376 -H unix:///var/run/docker.sock --tlsverify --tlscacert=/home/{{ansible_user}}/.certs/ca.pem --tlscert=/home/{{ansible_user}}/.certs/cert.pem --tlskey=/home/{{ansible_user}}/.certs/key.pem

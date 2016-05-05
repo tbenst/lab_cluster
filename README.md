@@ -7,22 +7,22 @@ Mozart is on .5
 
 ## To test:
 
-ansible -i hosts all -m ping --private-key=~/.ssh/master_rsa
+ansible all -m ping
 
 
 ## To run:
 
 ### main playbook
-ansible-playbook -i hosts main.yml
+ansible-playbook main.yml
 
 ### test playbook
-ansible-playbook -i hosts test.yml
+ansible-playbook test.yml
 
 ### REBOOT
-ansible-playbook -i hosts reboot.yml --extra-vars "hosts=all"
+ansible-playbook reboot.yml --extra-vars "hosts=all"
 
 ### Reset docker containers
-ansible-playbook -i hosts --tags=docker main.yml
+ansible-playbook --tags=docker main.yml
 
 
 ## Interact with the swarm!
@@ -33,6 +33,10 @@ sudo docker -H 127.0.0.1:4000 info
 ### should succeed (from a worker node)
 sudo docker -H 172.16.37.25:4000 --tlsverify --tlscacert=/home/vangelderlab/.certs/ca.pem --tlscert=/home/vangelderlab/.certs/cert.pem --tlskey=/home/vangelderlab/.certs/key.pem info
 
+### Other manager
+sudo docker -H 172.16.37.42:4000 --tlsverify --tlscacert=/home/vangelderlab/.certs/ca.pem --tlscert=/home/vangelderlab/.certs/cert.pem --tlskey=/home/vangelderlab/.certs/key.pem info
+
+# tyler home manager
 sudo docker -H 192.168.29.242:4000 --tlsverify --tlscacert=/home/vangelderlab/.certs/ca.pem --tlscert=/home/vangelderlab/.certs/cert.pem --tlskey=/home/vangelderlab/.certs/key.pem info
 
 

@@ -1,16 +1,15 @@
-- ufw: rule=allow port=2375 proto=tcp
-
-# TODO add following options to DOCKER_OPTS line of /etc/default/docker
-# -H tcp://0.0.0.0:2376 --tlsverify --tlscacert=/home/ubuntu/.certs/ca.pem --tlscert=/home/ubuntu/.certs/cert.pem --tlskey=/home/ubuntu/.certs/key.pem
-# may no longer need this manual socket stuff..? security hole anyway
-- name: Adding 2375/tcp socket
-  copy: src=docker-tcp.socket dest=/etc/systemd/system/
-- name: Boot with Docker tcp socket
-  service: name=docker-tcp.socket enabled=yes
+- ufw: rule=allow port=2376 proto=tcp
+- name: Create docker.service.d directory
+  file: path=/etc/systemd/system/docker.service.d state=directory
+- name: Adding Docker daemon options
+  template: src=docker.conf.j2 dest=/etc/systemd/system/docker.service.d/docker.conf
 - name: Stopping Docker
   service: name=docker state=stopped
-- name: Restart Docker tcp socket
-  service: name=docker-tcp.socket state=restarted
+- name: Reload Systemd
+  shell: systemctl daemon-reload
+# - name: Restart Docker tcp socket
+#   service: name=docker-tcp.socket state=restarted
+# http://tech.paulcz.net/2016/01/secure-docker-with-tls/
 - name: Starting Docker
   service: name=docker state=started
 
@@ -19,10 +18,10 @@
   docker:
     name: swarm
     image: swarm
-    command: "join --advertise={{ ansible_host }}:2375 consul://{{consul0_ip}}:8500"
+    command: "join --advertise={{ ansible_host }}:2376 consul://{{consul0_ip}}:8500"
     state: reloaded
     count: 1
-    use_tls: verify
-    tls_ca_cert: "{{cert_dir}}/ca.pem"
-    tls_client_cert: "{{cert_dir}}/cert.pem"
-    tls_client_key: "{{cert_dir}}/key.pem"
+    # use_tls: verify
+    # tls_ca_cert: "{{cert_dir}}/ca.pem"
+    # tls_client_cert: "{{cert_dir}}/cert.pem"
+    # tls_client_key: "{{cert_dir}}/key.pem"

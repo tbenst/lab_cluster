@@ -1,0 +1,2 @@
+ssh_key_name: master_rsa
+reverse_ssh_server: alexon.duckdns.org

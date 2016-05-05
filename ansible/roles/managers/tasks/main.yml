@@ -5,18 +5,18 @@
   docker:
     name: manager
     image: swarm
-    # TODO add commands for TLS, obv with consul instead of token 
-    # docker run  -v /home/ubuntu/.certs:/certs:ro swarm manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem --host=0.0.0.0:3376 token://$TOKEN
     command: "manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem -H :4000 --replication --advertise {{ansible_host}}:4000 consul://{{consul0_ip}}:8500"
     state: reloaded
     count: 1
     ports:
       - 4000:4000
     expose:
-      4000
+      - 4000
     volumes:
       - /home/{{ansible_user}}/.certs:/certs
-    # use_tls: verify
-    # tls_ca_cert: /certs/ca.pem
-    # tls_client_cert: /certs/cert.pem
-    # tls_client_key: /certs/key.pem
+- name: Copy reverse ssh service file
+  template: src=reverse-ssh.service.j2 dest=/etc/systemd/system/reverse-ssh.service
+- name: (Re)start reverse ssh service
+  service: name=reverse-ssh state=restarted
+- name: enable reverse ssh service at boot
+  service: name=reverse-ssh enabled=yes

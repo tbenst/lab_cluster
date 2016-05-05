@@ -1,0 +1,5 @@
+---
+- hosts: certificate-authority
+  tasks:
+    - name: removing certificates
+      file: "path={{ca_dir}} state=absent"
