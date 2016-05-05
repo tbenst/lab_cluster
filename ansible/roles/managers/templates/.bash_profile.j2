@@ -1,0 +1,4 @@
+export PATH=/usr/local/bin:$PATH
+export DOCKER_HOST=tcp://{{ansible_host}}:4000
+export DOCKER_TLS_VERIFY=1
+export DOCKER_CERT_PATH=/home/{{ansible_user}}/.docker
