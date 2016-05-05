@@ -14,6 +14,16 @@
       - 4000
     volumes:
       - /home/{{ansible_user}}/.certs:/certs
+# TODO this is not working; TLS certs still must be given
+- name: configure CLI to use TLS keys
+  template: "src=.bash_profile.j2 dest=/home/{{ansible_user}}/.bash_profile"
+- name: create .docker directory
+  file: "path=/home/{{ansible_user}}/.docker state=directory"
+- name: Copy certs
+  copy: 
+    src: "../../certificate-authority/files/{{inventory_hostname}}/"
+    dest: "/home/{{ansible_user}}/.docker"
+
 - name: Copy reverse ssh service file
   template: src=reverse-ssh.service.j2 dest=/etc/systemd/system/reverse-ssh.service
 - name: (Re)start reverse ssh service
