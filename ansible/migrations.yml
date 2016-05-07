@@ -1,6 +1,15 @@
 ---
-- include: load-facts.yml
+# - include: load-facts.yml
 
-- hosts: workers
+- hosts: all
   tasks:
     - debug: msg="Hello World"
+    - shell: rm /etc/apt/sources.list.d/download_ceph_com_debian_jewel.list
+    # - shell: rm -rf /data/*
+    # - name: purge aufs
+    #   shell: rm -rf /var/lib/docker/aufs
+    # - name: purge old
+    #   shell: apt -y autoremove
+    # - name: purge docker.io
+    #   shell: apt-get -y purge lxc-docker*
+    # - shell: apt-get -y update

@@ -1,5 +1,6 @@
 ---
 - hosts: workers
   roles:
+    - docker
     - workers
   tags: docker

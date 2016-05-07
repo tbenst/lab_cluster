@@ -82,3 +82,11 @@ openssl req -subj "/subjectAltName=swarm" -new -key swarm-priv-key.pem -out swar
 
 #### 
 /usr/bin/openssl req -config /usr/lib/ssl/openssl.cnf -new -key /home/vangelderlab/certificate-authority/ca-priv-key.pem -x509 -days 1825 -out /home/vangelderlab/certificate-authority/ca.pem
+
+### Mount CephFS
+sudo mount -t ceph 172.16.37.42:6789:/ /mnt/cephfs -o name=admin,secret=AQBMLixXOAyzLBAAm10tu+J6/OuZnTn3IvPuBg==
+
+
+# TODO: if upgrading the kernel, replace these
+sudo ceph osd pool set rbd hashpspool false
+sudo ceph osd crush tunables legacy

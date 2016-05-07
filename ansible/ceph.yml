@@ -1,0 +1,13 @@
+---
+- hosts: mons
+  tasks:
+    - ufw: rule=allow port=6789 proto=tcp
+
+- hosts: osds
+  tasks:
+    - ufw:
+        rule: allow
+        port: 6800:7300
+        from_ip: "{{hostvars[item]['ansible_eth0']['ipv4']['address']}}"
+        proto: tcp
+      with_items: "{{groups['all']}}"

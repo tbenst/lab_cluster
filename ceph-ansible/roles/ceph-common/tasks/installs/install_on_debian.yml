@@ -10,12 +10,13 @@
 - name: configure ceph apt repository
   include: debian_ceph_repository.yml
   when: ceph_origin == 'upstream'
-
 - name: install ceph
   apt:
     pkg: "{{ item }}"
     state: "{{ (upgrade_ceph_packages|bool) | ternary('latest','present') }}"
-    default_release: "{{ ceph_stable_release_uca | default(ansible_distribution_release) }}{{ '-backports' if ceph_origin == 'distro' and ceph_use_distro_backports else ''}}"
+    # TODO remove hack
+    # default_release: "{{ ceph_stable_release_uca | default(ansible_distribution_release) }}{{ '-backports' if ceph_origin == 'distro' and ceph_use_distro_backports else ''}}"
+    default_release: stretch
   with_items:
     - ceph
     - ceph-common    #|
@@ -42,6 +43,8 @@
   apt:
     pkg: ceph-mds
     state: "{{ (upgrade_ceph_packages|bool) | ternary('latest','present') }}"
-    default_release: "{{ ceph_stable_release_uca | default(ansible_distribution_release) }}{{ '-backports' if ceph_origin == 'distro' and ceph_use_distro_backports else ''}}"
+    # TODO another hack for debian Stretch
+    # default_release: "{{ ceph_stable_release_uca | default(ansible_distribution_release) }}{{ '-backports' if ceph_origin == 'distro' and ceph_use_distro_backports else ''}}"
+    default_release: stretch
   when:
     mds_group_name in group_names

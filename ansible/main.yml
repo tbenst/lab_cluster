@@ -2,7 +2,8 @@
 - include: migrations.yml
 - include: certificate-authority.yml
 - include: common.yml
-- include: reset-docker.yml
+- include: soft-reset.yml
 - include: consuls.yml
 - include: managers.yml
 - include: workers.yml
+- include: ceph.yml

@@ -7,6 +7,9 @@ pearl-jam       ansible_host=172.16.37.82
 jimi-hendrix    ansible_host=172.16.37.25
 soundgarden     ansible_host=172.16.37.42
 
+[pentium4]
+mozart          ansible_host=172.16.37.5
+
 [consul0]
 jimi-hendrix
 
@@ -19,3 +22,19 @@ jimi-hendrix
 
 [workers:children]
 corei3
+
+[docker:children]
+consul0
+managers
+workers
+
+[mons]
+soundgarden
+
+[mdss]
+jimi-hendrix
+
+[osds]
+macklemore
+nirvana
+pearl-jam

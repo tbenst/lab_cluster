@@ -1,6 +1,5 @@
 ---
-- hosts: managers
+- hosts: docker
   roles:
     - docker
-    - managers
   tags: docker

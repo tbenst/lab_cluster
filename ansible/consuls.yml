@@ -1,5 +1,6 @@
 ---
 - hosts: consul0
   roles:
+    - docker
     - consuls
   tags: docker
