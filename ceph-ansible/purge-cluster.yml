@@ -92,13 +92,14 @@
      state: absent
 
   tasks:
-  - name: check for a device list
-    fail:
-      msg: "OSD automatic discovery was detected, purge cluster does not support this scenario. If you want to purge the cluster, manually provide the list of devices in group_vars/osds using the devices variable."
-    when:
-      osd_group_name in group_names and
-      devices is not defined and
-      osd_auto_discovery
+  # TODO remove hack?
+  # - name: check for a device list
+  #   fail:
+  #     msg: "OSD automatic discovery was detected, purge cluster does not support this scenario. If you want to purge the cluster, manually provide the list of devices in group_vars/osds using the devices variable."
+  #   when:
+  #     osd_group_name in group_names and
+  #     devices is not defined and
+  #     osd_auto_discovery
 
   - name: get osd numbers
     shell: "if [ -d /var/lib/ceph/osd ] ; then ls /var/lib/ceph/osd | cut -d '-' -f 2 ; fi"
