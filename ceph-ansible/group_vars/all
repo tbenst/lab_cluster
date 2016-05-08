@@ -89,7 +89,7 @@ upgrade_ceph_packages: True
 ceph_stable: true # use ceph stable branch
 ceph_stable_key: https://download.ceph.com/keys/release.asc
 ceph_stable_release: jewel # ceph stable release
-# ceph_stable_repo: "http://download.ceph.com/debian-{{ ceph_stable_release }}"
+ceph_stable_repo: "http://download.ceph.com/debian-{{ ceph_stable_release }}"
 
 ###################
 # Stable Releases #
