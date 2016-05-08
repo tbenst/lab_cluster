@@ -26,7 +26,7 @@
 
 - name: Copy reverse ssh service file
   template: src=reverse-ssh.service.j2 dest=/etc/systemd/system/reverse-ssh.service
-- name: (Re)start reverse ssh service
-  service: name=reverse-ssh state=restarted
+- name: Start reverse ssh service
+  service: name=reverse-ssh state=started
 - name: enable reverse ssh service at boot
   service: name=reverse-ssh enabled=yes

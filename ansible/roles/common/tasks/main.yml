@@ -8,8 +8,8 @@
 
 - name: Updating Apt repository
   apt: update_cache=yes
-- name: Updating distribution
-  apt: upgrade=dist
+# - name: Updating distribution
+#   apt: upgrade=dist
   
 - name: Installing packages
   apt: name={{ item }} state=latest
