@@ -17,6 +17,7 @@
     - apt-transport-https
     - ca-certificates
     - nmap
+    - mosh
 - name: Installing python
   apt: name=python state=latest
 

@@ -16,9 +16,11 @@
     state: "{{ (upgrade_ceph_packages|bool) | ternary('latest','present') }}"
     # TODO remove hack
     # default_release: "{{ ceph_stable_release_uca | default(ansible_distribution_release) }}{{ '-backports' if ceph_origin == 'distro' and ceph_use_distro_backports else ''}}"
-    default_release: "jessie{{ '-backports' if ceph_origin == 'distro' and ceph_use_distro_backports else ''}}"
+    # default_release: "jessie{{ '-backports' if ceph_origin == 'distro' and ceph_use_distro_backports else ''}}"
     # default_release: stretch
   with_items:
+    - ceph-mon
+    - ceph-osd
     - ceph
     - ceph-common    #|
     - ceph-fs-common #|--> yes, they are already all dependencies from 'ceph'
