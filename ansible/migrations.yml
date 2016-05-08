@@ -3,8 +3,8 @@
 
 - hosts: all
   tasks:
-    - debug: msg="Hello World"
-    - shell: rm /etc/apt/sources.list.d/download_ceph_com_debian_jewel.list
+    # - debug: msg="Hello World"
+    # - shell: rm /etc/apt/sources.list.d/download_ceph_com_debian_jewel.list
     # - shell: rm -rf /data/*
     # - name: purge aufs
     #   shell: rm -rf /var/lib/docker/aufs
