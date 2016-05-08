@@ -75,7 +75,7 @@ upgrade_ceph_packages: True
 
 ## Configure package origin
 #
-# ceph_origin: 'distro' # or 'distro'
+ceph_origin: 'upstream' # or 'distro'
 # 'distro' means that no separate repo file will be added
 # you will get whatever version of Ceph is included in your Linux distro.
 #
