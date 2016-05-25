@@ -8,9 +8,9 @@ auto lo
 iface lo inet loopback
 
 # The primary network interface
-auto eth0
-allow-hotplug eth0
-iface eth0 inet static
+auto enp0s7
+allow-hotplug enp0s7
+iface enp0s7 inet static
 address {{ ansible_host }}
 netmask 255.255.254.0
 gateway 172.16.36.1
