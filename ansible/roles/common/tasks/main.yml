@@ -3,8 +3,6 @@
   copy: src=.bash_profile dest=/root
 - name: "Bash profile {{ansible_user}}"
   copy: "src=.bash_profile dest=/home/{{ansible_user}}"
-- name: add Stretch to apt sources
-  copy: src=sources.list dest=/etc/apt/
 
 - name: Updating Apt repository
   apt: update_cache=yes
