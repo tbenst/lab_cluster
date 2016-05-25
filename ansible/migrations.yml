@@ -4,12 +4,9 @@
 - hosts: all
   tasks:
     # - debug: msg="Hello World"
-    # - shell: rm /etc/apt/sources.list.d/download_ceph_com_debian_jewel.list
-    # - shell: rm -rf /data/*
-    # - name: purge aufs
-    #   shell: rm -rf /var/lib/docker/aufs
-    # - name: purge old
-    #   shell: apt -y autoremove
-    # - name: purge docker.io
-    #   shell: apt-get -y purge lxc-docker*
-    # - shell: apt-get -y update
+    - shell: sudo apt-get clean
+    - shell: cd /var/lib/apt
+    - shell: sudo mv lists lists.old
+    - shell: sudo mkdir -p lists/partial
+    - shell: sudo apt-get clean
+    - shell: sudo apt-get update
