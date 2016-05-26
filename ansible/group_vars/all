@@ -1,4 +1,4 @@
 ansible_port: 2424
 ansible_user: vangelderlab
-consul0_ip: "{{ hostvars[groups['consul0'][0]]['ansible_eth0']['ipv4']['address']}}"
+consul0_ip: "{{ hostvars[groups['consul0'][0]].ansible_default_ipv4.address }}"
 cert_dir: "/home/{{ansible_user}}/.certs"
