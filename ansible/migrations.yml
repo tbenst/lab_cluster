@@ -4,3 +4,5 @@
 - hosts: all
   tasks:
     - debug: msg="Running Migrations"
+    # - debug: msg="{{ hostvars[groups['consul0'][0]]['ansible_eth0']['ipv4']['address']}}"
+    - debug: msg="{{ groups['consul0'][0]}}"
