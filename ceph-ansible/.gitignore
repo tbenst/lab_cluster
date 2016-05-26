@@ -4,7 +4,5 @@
 fetch/*
 vagrant_variables.yml
 *.DS_Store
-site.yml
-site-docker.yml
 *.pyc
 *.sw?
