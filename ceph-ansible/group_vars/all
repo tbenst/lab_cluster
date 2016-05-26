@@ -193,6 +193,8 @@ check_firewall: True
 # false, you *must* generate `fsid` in another way.
 #fsid: "{{ cluster_uuid.stdout }}"
 #generate_fsid: true
+fsid: 06DCFA08-DB35-4409-85F1-C9A4818D8800
+generate_fsid: false
 
 #cephx: true
 #max_open_files: 131072
@@ -251,6 +253,7 @@ check_firewall: True
 #
 #journal_size: 0
 #public_network: 0.0.0.0/0
+public_network: 172.16.36.0/23
 #cluster_network: "{{ public_network }}"
 #osd_mkfs_type: xfs
 #osd_mkfs_options_xfs: -f -i size=2048
