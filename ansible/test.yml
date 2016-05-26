@@ -5,4 +5,4 @@
     - debug: msg="System {{ inventory_hostname }} has ip {{ ansible_host }}"
     # - debug: msg="now on {{hostvars[item]}}"
     #   with_items: groups['all']
-    - debug: msg="{{ hostvars[groups['consul0'][0]] }}"
+    - debug: msg="{{ hostvars[groups['consul0'][0]].ansible_default_ipv4.address }}"
