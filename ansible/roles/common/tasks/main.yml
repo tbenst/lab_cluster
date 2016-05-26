@@ -3,8 +3,10 @@
   copy: src=.bash_profile dest=/root
 - name: "Bash profile {{ansible_user}}"
   copy: "src=.bash_profile dest=/home/{{ansible_user}}"
-- name: adding ubuntu repo key
-  apt_key: keyserver=keyserver.ubuntu.com id=8B48AD6246925553
+# - name: adding ubuntu repo key
+#   apt_key: keyserver=keyserver.ubuntu.com id=8B48AD6246925553
+
+- copy: "src=sources.list dest=/etc/apt/"
 
 - name: Updating Apt repository
   apt: update_cache=yes

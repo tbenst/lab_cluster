@@ -6,3 +6,6 @@
     - debug: msg="Running Migrations"
     # - debug: msg="{{ hostvars[groups['consul0'][0]]['ansible_eth0']['ipv4']['address']}}"
     - debug: msg="{{ groups['consul0'][0]}}"
+    - apt_key: keyserver=keyserver.ubuntu.com id=8B48AD6246925553 state=absent
+    - apt_key: keyserver=keyserver.ubuntu.com id=7638D0442B90D010 state=absent
+    - apt_key: keyserver=keyserver.ubuntu.com id=9D6D8F6BC857C906 state=absent
