@@ -251,7 +251,7 @@ monitor_interface: enp0s7
 
 ## OSD options
 #
-#journal_size: 0
+journal_size: 1024
 #public_network: 0.0.0.0/0
 public_network: 172.16.36.0/23
 #cluster_network: "{{ public_network }}"
