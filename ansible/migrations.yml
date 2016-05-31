@@ -5,7 +5,7 @@
   tasks:
     - debug: msg="Running Migrations"
 
-- hosts: macklemore
+- hosts: corei3
   tasks:
     - name: Setting IP to Static with settings for UW
       template: src=interfaces.j2 dest=/etc/network/interfaces
