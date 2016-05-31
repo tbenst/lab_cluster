@@ -1,7 +1,7 @@
 [corei3]
-# macklemore      ansible_host=172.16.37.177
+macklemore      ansible_host=172.16.37.177
 nirvana         ansible_host=172.16.37.238
-# pearl-jam       ansible_host=172.16.37.82
+pearl-jam       ansible_host=172.16.37.82
 
 [athlonx2]
 jimi-hendrix    ansible_host=172.16.37.25
@@ -35,6 +35,6 @@ soundgarden
 jimi-hendrix
 
 [osds]
-# macklemore
+macklemore
 nirvana
-# pearl-jam
+pearl-jam
