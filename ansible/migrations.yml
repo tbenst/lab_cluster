@@ -4,3 +4,10 @@
 - hosts: all
   tasks:
     - debug: msg="Running Migrations"
+
+- hosts: macklemore
+  tasks:
+    - name: Setting IP to Static with settings for UW
+      template: src=interfaces.j2 dest=/etc/network/interfaces
+      notify:
+        - restart networking

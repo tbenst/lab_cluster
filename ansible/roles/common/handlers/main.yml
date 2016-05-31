@@ -1,4 +1,6 @@
 - name: restart networking
   service: name=networking state=restarted
+
+# TODO why is this here..?
 - name: install pip
   include: pip.yml

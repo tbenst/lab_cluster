@@ -19,10 +19,10 @@
 - name: Installing python
   apt: name=python state=latest
 
-- name: Setting IP to Static with settings for UW
-  template: src=interfaces.j2 dest=/etc/network/interfaces
-  notify:
-    - restart networking
+# - name: Setting IP to Static with settings for UW
+#   template: src=interfaces.j2 dest=/etc/network/interfaces
+#   notify:
+#     - restart networking
 
 # - name: Setup firewall
 - apt: name=ufw state=latest
