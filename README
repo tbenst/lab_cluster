@@ -1,3 +1,5 @@
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/master_rsa
-git pull
+How to mount CephFS:
+sudo mount -t ceph 172.16.37.42:6789:/ /cephfs
+
+How to connect to Docker Swarm:
+sudo docker --tlsverify --tlscacert=/home/vangelderlab/.certs/ca.pem --tlscert=/home/vangelderlab/.certs/cert.pem --tlskey=/home/vangelderlab/.certs/key.pem -H 172.16.37.25:4000 version
