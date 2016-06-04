@@ -75,7 +75,7 @@ copy_admin_key: true
 # Thus devices with existing partition tables will not be used.
 # This mode prevents you from filling out the 'devices' variable above.
 #
-#osd_auto_discovery: false
+osd_auto_discovery: false
 
 # I. First scenario: journal and osd_data on the same device
 # Use 'true' to enable this scenario
