@@ -5,7 +5,7 @@
 
 - hosts: osds
   tasks:
-    - debug: msg="{{hostvars[item]}}"
+    - debug: msg="{{hostvars[item]['ansible_default_ipv4'][address]}}"
       with_items: "{{groups['all']}}"
 
     - ufw:
