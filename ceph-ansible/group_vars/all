@@ -27,7 +27,7 @@ dummy:
 ###########
 
 #mon_group_name: mons
-#osd_group_name: osds
+osd_group_name: osds
 #rgw_group_name: rgws
 #mds_group_name: mdss
 #restapi_group_name: restapis
