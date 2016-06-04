@@ -5,9 +5,11 @@
   tasks:
     - debug: msg="Running Migrations"
 
-# - hosts: corei3
-#   tasks:
-#     - name: Setting IP to Static with settings for UW
-#       template: src=interfaces.j2 dest=/etc/network/interfaces
-#       notify:
-#         - restart networking
+- hosts: corei3
+  tasks:
+    # - name: Setting IP to Static with settings for UW
+    #   template: src=interfaces.j2 dest=/etc/network/interfaces
+    #   notify:
+    #     - restart networking
+    - name: reset data
+      shell: rm -rf /data/*
