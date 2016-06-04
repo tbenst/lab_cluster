@@ -8,8 +8,8 @@
     - ufw:
         rule: allow
         port: 6800:7300
-        from_ip: "{{item}}"
-        # from_ip: "{{hostvars[item]['ansible_enp0s7']['ipv4']['address']}}"
+        # from_ip: "{{item}}"
+        from_ip: "{{hostvars[item]['ansible_eth0']['ipv4']['address']}}"
         proto: tcp
         delete: yes 
       # with_items: "{{ansible_all_ipv4_addresses}}"
