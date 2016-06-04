@@ -12,5 +12,5 @@
         # from_ip: "{{hostvars[item]['ansible_enp0s7']['ipv4']['address']}}"
         proto: tcp
         delete: yes 
-      with_items: "{{ansible_all_ipv4_addresses}}"
-      # with_items: "{{groups['all']}}"
+      # with_items: "{{ansible_all_ipv4_addresses}}"
+      with_items: "{{groups['all']}}"
