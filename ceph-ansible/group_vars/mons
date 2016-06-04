@@ -13,20 +13,20 @@ dummy:
 # GENERAL #
 ###########
 
-#fetch_directory: fetch/
+fetch_directory: fetch/
 
-#mon_group_name: mons
+mon_group_name: mons
 
 # ACTIVATE BOTH FSID AND MONITOR_SECRET VARIABLES FOR NON-VAGRANT DEPLOYMENT
-#fsid: "{{ cluster_uuid.stdout }}"
+fsid: 06DCFA08-DB35-4409-85F1-C9A4818D8800
 monitor_secret: AQBxKyxX7qPGBRAAtQwfS9YRsqJbW2qRDPEGmQ==
-#cephx: true
+cephx: false
 
 # CephFS
-#pool_default_pg_num: 128
-#cephfs_data: cephfs_data
-#cephfs_metadata: cephfs_metadata
-#cephfs: cephfs
+pool_default_pg_num: 128
+cephfs_data: cephfs_data
+cephfs_metadata: cephfs_metadata
+cephfs: cephfs
 
 # Secure your cluster
 # This will set the following flags on all the pools:
