@@ -5,7 +5,7 @@
 
 - hosts: osds
   tasks:
-    - debug: msg="{{item}}"
+    - debug: msg="{{hostvars[item]}}"
       with_items: "{{groups['all']}}"
 
     - ufw:
