@@ -117,7 +117,7 @@
       state: stopped
       enabled: no
     when:
-      ansible_os_family == 'RedHat' and
+      # ansible_os_family == 'RedHat' and
       systemd_unit_files.stdout != "0"
 
   - name: stop ceph-osd with systemd
@@ -127,7 +127,7 @@
       enabled: no
     with_items: "{{ osd_ids.stdout_lines }}"
     when:
-      ansible_os_family == 'RedHat' and
+      # ansible_os_family == 'RedHat' and
       systemd_unit_files.stdout != "0" and
       osd_group_name in group_names
 
@@ -137,7 +137,7 @@
       state: stopped
       enabled: no
     when:
-      ansible_os_family == 'RedHat' and
+      # ansible_os_family == 'RedHat' and
       systemd_unit_files.stdout != "0" and
       mon_group_name in group_names
 
@@ -146,7 +146,7 @@
       name: ceph-mds@{{ ansible_hostname }}
       state: stopped
     when:
-      ansible_os_family == 'RedHat' and
+      # ansible_os_family == 'RedHat' and
       systemd_unit_files.stdout != "0" and
       mds_group_name in group_names
 
@@ -155,7 +155,7 @@
       name: ceph-radosgw@rgw.{{ ansible_hostname }}
       state: stopped
     when:
-      ansible_os_family == 'RedHat' and
+      # ansible_os_family == 'RedHat' and
       systemd_unit_files.stdout != "0" and
       rgw_group_name in group_names
 
@@ -164,7 +164,7 @@
       name: ceph-rbd-mirror@admin.service
       state: stopped
     when:
-      ansible_os_family == 'RedHat' and
+      # ansible_os_family == 'RedHat' and
       systemd_unit_files.stdout != "0" and
       rbdmirror_group_name in group_names
 
