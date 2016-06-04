@@ -11,6 +11,5 @@
         # from_ip: "{{item}}"
         from_ip: "{{hostvars[item].ansible_host}}"
         proto: tcp
-        delete: yes 
       # with_items: "{{ansible_all_ipv4_addresses}}"
       with_items: "{{groups['all']}}"
