@@ -196,7 +196,7 @@ ceph_origin: 'distro'
 fsid: 06DCFA08-DB35-4409-85F1-C9A4818D8800
 generate_fsid: false
 
-#cephx: true
+cephx: false
 #max_open_files: 131072
 
 ## Client options
