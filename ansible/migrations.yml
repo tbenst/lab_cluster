@@ -5,7 +5,7 @@
   tasks:
     - debug: msg="Running Migrations"
 
-- hosts: corei3
+- hosts: all
   tasks:
     - name: Setting IP to Static with settings for UW
       template: src=interfaces.j2 dest=/etc/network/interfaces
