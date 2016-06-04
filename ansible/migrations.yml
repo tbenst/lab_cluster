@@ -7,10 +7,11 @@
 
 - hosts: all
   tasks:
-    - name: Setting IP to Static with settings for UW
-      template: src=interfaces.j2 dest=/etc/network/interfaces
-      notify:
-        - restart networking
+    # only use with core i3
+    # - name: Setting IP to Static with settings for UW
+    #   template: src=interfaces.j2 dest=/etc/network/interfaces
+    #   notify:
+    #     - restart networking
 
-    - name: restart networking
-      service: name=networking state=restarted 
+    # - name: restart networking
+    #   service: name=networking state=restarted 
