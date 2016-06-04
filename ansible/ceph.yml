@@ -6,7 +6,7 @@
 - hosts: osds
   tasks:
     # - debug: msg="{{hostvars[item]['ansible_default_ipv4']}}"
-    - debug: msg="{{hostvars[item]['ansible_all_ipv4_addresses']}}"
+    - debug: msg="{{item}}"
       with_items: "{{groups['all']}}"
       # not working
 
