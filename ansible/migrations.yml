@@ -7,9 +7,11 @@
 
 - hosts: corei3
   tasks:
-    # - name: Setting IP to Static with settings for UW
-    #   template: src=interfaces.j2 dest=/etc/network/interfaces
-    #   notify:
-    #     - restart networking
-    - name: reset data
-      shell: rm -rf /data/*
+    - name: Setting IP to Static with settings for UW
+      template: src=interfaces.j2 dest=/etc/network/interfaces
+      notify:
+        - restart networking
+
+  handlers:
+    - name: restart networking
+      shell: ifdown enp1s0 && ifup enp1s0 
