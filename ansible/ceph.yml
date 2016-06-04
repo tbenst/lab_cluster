@@ -5,16 +5,16 @@
 
 - hosts: osds
   tasks:
-    - debug: msg="{{hostvars[item].ansible_default_ipv4}}"
+    - debug: msg="{{hostvars[item]['ansible_default_ipv4']}}"
       with_items: "{{groups['all']}}"
       # not working
 
-    - ufw:
-        rule: allow
-        port: 6800:7300
-        # from_ip: "{{item}}"
-        from_ip: "{{hostvars[item]['ansible_eth0']['ipv4']['address']}}"
-        proto: tcp
-        delete: yes 
-      # with_items: "{{ansible_all_ipv4_addresses}}"
-      with_items: "{{groups['all']}}"
+    # - ufw:
+    #     rule: allow
+    #     port: 6800:7300
+    #     # from_ip: "{{item}}"
+    #     from_ip: "{{hostvars[item]['ansible_eth0']['ipv4']['address']}}"
+    #     proto: tcp
+    #     delete: yes 
+    #   # with_items: "{{ansible_all_ipv4_addresses}}"
+    #   with_items: "{{groups['all']}}"
