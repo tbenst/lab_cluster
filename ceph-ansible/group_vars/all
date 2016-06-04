@@ -26,10 +26,10 @@ dummy:
 # INSTALL #
 ###########
 
-#mon_group_name: mons
+mon_group_name: mons
 osd_group_name: osds
 #rgw_group_name: rgws
-#mds_group_name: mdss
+mds_group_name: mdss
 #restapi_group_name: restapis
 #rbdmirror_group_name: rbdmirrors
 #client_group_name: clients
