@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ hosts }}"
+- hosts: all
   
   tasks:
     - command: /sbin/shutdown -r now

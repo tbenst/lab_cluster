@@ -116,9 +116,9 @@
       name: ceph.target
       state: stopped
       enabled: no
-    when:
+    # when:
       # ansible_os_family == 'RedHat' and
-      systemd_unit_files.stdout != "0"
+      # systemd_unit_files.stdout != "0"
 
   - name: stop ceph-osd with systemd
     service:
@@ -127,9 +127,9 @@
       enabled: no
     with_items: "{{ osd_ids.stdout_lines }}"
     when:
-      # ansible_os_family == 'RedHat' and
-      systemd_unit_files.stdout != "0" and
       osd_group_name in group_names
+      # ansible_os_family == 'RedHat' and
+      # systemd_unit_files.stdout != "0" and
 
   - name: stop ceph mons with systemd
     service:
@@ -137,36 +137,36 @@
       state: stopped
       enabled: no
     when:
-      # ansible_os_family == 'RedHat' and
-      systemd_unit_files.stdout != "0" and
       mon_group_name in group_names
+      # ansible_os_family == 'RedHat' and
+      # systemd_unit_files.stdout != "0" and
 
   - name: stop ceph mdss with systemd
     service:
       name: ceph-mds@{{ ansible_hostname }}
       state: stopped
     when:
-      # ansible_os_family == 'RedHat' and
-      systemd_unit_files.stdout != "0" and
       mds_group_name in group_names
+      # ansible_os_family == 'RedHat' and
+      # systemd_unit_files.stdout != "0" and
 
   - name: stop ceph rgws with systemd
     service:
       name: ceph-radosgw@rgw.{{ ansible_hostname }}
       state: stopped
     when:
-      # ansible_os_family == 'RedHat' and
-      systemd_unit_files.stdout != "0" and
       rgw_group_name in group_names
+      # ansible_os_family == 'RedHat' and
+      # systemd_unit_files.stdout != "0" and
 
   - name: stop ceph rbd mirror with systemd
     service:
       name: ceph-rbd-mirror@admin.service
       state: stopped
     when:
-      # ansible_os_family == 'RedHat' and
-      systemd_unit_files.stdout != "0" and
       rbdmirror_group_name in group_names
+      # ansible_os_family == 'RedHat' and
+      # systemd_unit_files.stdout != "0" and
 
 # before infernalis release, using sysvinit scripts
 # we use this test so we do not have to know which RPM contains the boot script
