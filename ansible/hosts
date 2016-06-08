@@ -31,6 +31,9 @@ workers
 [mons]
 soundgarden
 
+[rgws]
+soundgarden
+
 [mdss]
 jimi-hendrix
 

@@ -5,8 +5,11 @@
   tasks:
     - debug: msg="Running Migrations"
 
-- hosts: all
+- hosts: corei3
   tasks:
+    - ufw:
+        rule: allow
+        port: 3000
     # only use with core i3
     # - name: Setting IP to Static with settings for UW
     #   template: src=interfaces.j2 dest=/etc/network/interfaces
