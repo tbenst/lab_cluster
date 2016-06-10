@@ -3,15 +3,13 @@
   file: path=/etc/systemd/system/docker.service.d state=directory
 - name: Adding Docker daemon options
   template: src=docker.conf.j2 dest=/etc/systemd/system/docker.service.d/docker.conf
-- name: Stopping Docker
-  service: name=docker state=stopped
-- name: Reload Systemd
-  shell: systemctl daemon-reload
+  notify:
+    - Stop Docker
+    - Reload Systemd
+    - Start Docker
 # - name: Restart Docker tcp socket
 #   service: name=docker-tcp.socket state=restarted
 # http://tech.paulcz.net/2016/01/secure-docker-with-tls/
-- name: Starting Docker
-  service: name=docker state=started
 
 - name: Join swarm
   tags: drone
@@ -19,9 +17,18 @@
     name: swarm
     image: swarm
     command: "join --advertise={{ ansible_host }}:2376 consul://{{consul0_ip}}:8500"
-    state: reloaded
+    state: started
+    # state: reloaded
     count: 1
     # use_tls: verify
     # tls_ca_cert: "{{cert_dir}}/ca.pem"
     # tls_client_cert: "{{cert_dir}}/cert.pem"
     # tls_client_key: "{{cert_dir}}/key.pem"
+
+handlers:
+  - name: Stop Docker
+    service: name=docker state=stopped
+  - name: Reload Systemd
+    shell: systemctl daemon-reload
+  - name: Start Docker
+    service: name=docker state=started

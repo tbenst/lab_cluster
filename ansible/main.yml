@@ -3,7 +3,7 @@
 # TODO
 # - include: certificate-authority.yml
 - include: common.yml
-- include: soft-reset.yml
+# - include: soft-reset.yml
 - include: consuls.yml
 - include: managers.yml
 - include: workers.yml

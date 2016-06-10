@@ -6,7 +6,8 @@
     name: manager
     image: swarm
     command: "manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem -H :4000 --replication --advertise {{ansible_host}}:4000 consul://{{consul0_ip}}:8500"
-    state: reloaded
+    state: started
+    # state: reloaded
     count: 1
     ports:
       - 4000:4000
@@ -15,7 +16,7 @@
     volumes:
       - /home/{{ansible_user}}/.certs:/certs
 # TODO this is not working; TLS certs still must be given
-- name: configure CLI to use TLS keys
+- name: create bash profile / configure CLI to use TLS keys
   template: "src=.bash_profile.j2 dest=/home/{{ansible_user}}/.bash_profile"
 - name: create .docker directory
   file: "path=/home/{{ansible_user}}/.docker state=directory"
