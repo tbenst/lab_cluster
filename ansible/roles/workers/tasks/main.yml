@@ -24,11 +24,3 @@
     # tls_ca_cert: "{{cert_dir}}/ca.pem"
     # tls_client_cert: "{{cert_dir}}/cert.pem"
     # tls_client_key: "{{cert_dir}}/key.pem"
-
-handlers:
-  - name: Stop Docker
-    service: name=docker state=stopped
-  - name: Reload Systemd
-    shell: systemctl daemon-reload
-  - name: Start Docker
-    service: name=docker state=started
