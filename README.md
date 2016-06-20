@@ -8,6 +8,7 @@ To deploy, ubuntu 16.04 must be installed on all target hosts & the setup shell 
 
 ## Connecting
 (Please note IP addresses may be different depending on your setup)
+
 How to mount CephFS:
 ```
 sudo mount -t ceph 172.16.37.42:6789:/ /cephfs
