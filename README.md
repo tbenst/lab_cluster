@@ -1,4 +1,6 @@
-Sets up a cluster of machines with [https://www.docker.com/products/docker-swarm Docker Swarm] and [https://en.wikipedia.org/wiki/Ceph_(software) CephFS] using [http://docs.ansible.com/ansible/index.html Ansible].
+# Lab Cluster
+
+Sets up a cluster of machines with [Docker Swarm](https://www.docker.com/products/docker-swarm) and [CephFS](https://en.wikipedia.org/wiki/Ceph_(software\)) using [Ansible](http://docs.ansible.com/ansible/index.html).
 
 IP addresses must be manually specified in the hosts file.
 
