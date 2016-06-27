@@ -1,3 +1,8 @@
+- name: Bash profile (root)
+  copy: src=.bash_profile dest=/root
+- name: "Bash profile {{ansible_user}}"
+  copy: "src=.bash_profile dest=/home/{{ansible_user}}"
+
 - ufw: rule=allow port=2376 proto=tcp
 - name: Create docker.service.d directory
   file: path=/etc/systemd/system/docker.service.d state=directory

@@ -4,7 +4,7 @@
     name: consul
     image: progrium/consul
     command: "-server -bootstrap"
-    state: reloaded
+    state: started
     count: 1
     ports:
       - 8500:8500

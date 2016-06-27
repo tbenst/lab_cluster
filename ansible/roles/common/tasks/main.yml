@@ -1,9 +1,3 @@
-# https://docs.docker.com/engine/installation/linux/debian/#debian-jessie-80-64-bit
-- name: Bash profile (root)
-  copy: src=.bash_profile dest=/root
-- name: "Bash profile {{ansible_user}}"
-  copy: "src=.bash_profile dest=/home/{{ansible_user}}"
-
 # - copy: "src=sources.list dest=/etc/apt/"
 
 - name: Updating Apt repository
