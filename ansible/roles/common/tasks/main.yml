@@ -23,9 +23,6 @@
 - ufw: "rule=limit port={{ansible_port}} proto=tcp"
 - ufw: state=enabled
 
-
-# TODO change to ca.pem, cert.pem and key.pem
-
 - name: Make directory for certs
   file: "path={{cert_dir}} state=directory"
 - name: Transfer CA cert

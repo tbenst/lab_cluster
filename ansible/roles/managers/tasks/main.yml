@@ -15,7 +15,6 @@
       - 4000
     volumes:
       - /home/{{ansible_user}}/.certs:/certs
-# TODO this is not working; TLS certs still must be given
 - name: create bash profile / configure CLI to use TLS keys
   template: "src=.bash_profile.j2 dest=/home/{{ansible_user}}/.bash_profile"
 - name: create .docker directory

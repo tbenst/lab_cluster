@@ -1,6 +1,6 @@
 ---
 - include: migrations.yml
-# TODO
+# TODO certificate-authority is not idempotent
 - include: certificate-authority.yml
 - include: common.yml
 # - include: soft-reset.yml
@@ -8,3 +8,4 @@
 - include: managers.yml
 - include: workers.yml
 - include: ceph.yml
+- include: containers.yml

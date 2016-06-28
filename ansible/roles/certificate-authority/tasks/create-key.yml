@@ -1,5 +1,3 @@
-# TODO change to ca.pem, cert.pem and key.pem
-
 - set_fact: "node_ip={{hostvars[node_name].ansible_host}}"
 - set_fact: "san_ip={{node_ip}}"
 - name: Making openssl.cfg from template

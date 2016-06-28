@@ -1,0 +1,16 @@
+---
+- hosts: docker
+  tags: docker
+  
+  tasks:
+    # TODO git pull, docker-compose
+    # - name: Starting Eye Candy
+    #   docker:
+    #     name: Eye Candy (experiments)
+    #     image: tbenst/eye-candy
+    #     command: "-server -bootstrap"
+    #     state: started
+    #     count: 1
+    #     ports:
+    #       - 8500:8500
+
