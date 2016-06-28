@@ -3,3 +3,5 @@
   tasks:
     - name: removing certificates
       file: "path={{ca_dir}} state=absent"
+
+- include: docker-reset.yml

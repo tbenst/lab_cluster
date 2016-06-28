@@ -1,0 +1,14 @@
+---
+- hosts: docker
+  tags: docker
+  
+  tasks:
+    - name: Stopping all Docker containers
+      shell: "docker stop $(docker ps -a -q)"
+      ignore_errors: yes
+    - name: Removing all Docker containers
+      shell: "docker rm $(docker ps -a -q)"
+      ignore_errors: yes
+    - name: Removing all docker images
+      shell: docker rmi $(docker images -q)
+      ignore_errors: yes
