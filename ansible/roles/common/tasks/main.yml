@@ -23,6 +23,9 @@
 - ufw: "rule=limit port={{ansible_port}} proto=tcp"
 - ufw: state=enabled
 
+
+# TODO change to ca.pem, cert.pem and key.pem
+
 - name: Make directory for certs
   file: "path={{cert_dir}} state=directory"
 - name: Transfer CA cert
@@ -31,9 +34,9 @@
     dest: "{{cert_dir}}/"
 - name: Transfer node's public cert
   copy: 
-    src: "{{ca_filepath}}/{{inventory_hostname}}/{{inventory_hostname}}-cert.pem"
+    src: "{{ca_filepath}}/{{inventory_hostname}}/cert.pem"
     dest: "{{cert_dir}}/cert.pem"
 - name: Transfer node's private key
   copy: 
-    src: "{{ca_filepath}}/{{inventory_hostname}}/{{inventory_hostname}}-priv-key.pem"
+    src: "{{ca_filepath}}/{{inventory_hostname}}/{{inventory_hostname}}key.pem"
     dest: "{{cert_dir}}/key.pem"
