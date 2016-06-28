@@ -31,7 +31,7 @@
 - name: Transfer CA cert
   copy:
     src: "{{ca_filepath}}/ca.pem"
-    dest: "{{cert_dir}}/"
+    dest: "{{cert_dir}}/ca.pem"
 - name: Transfer node's public cert
   copy: 
     src: "{{ca_filepath}}/{{inventory_hostname}}/cert.pem"
