@@ -33,5 +33,5 @@
   when: item.changed
 
 - name: Fetch certs from CA
-  synchronize: "mode=pull src={{ca_dir}}/ dest=../files"
+  synchronize: "mode=pull src={{ca_dir}}/ dest=../certs"
   become: no
