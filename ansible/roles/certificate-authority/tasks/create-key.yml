@@ -14,7 +14,7 @@
 
 - name: create signing request for {{ node_name }}
   shell: "/usr/bin/openssl req -new
-    -key {{work_dir}}/{{node_name}}-priv-key.pem
+    -key {{work_dir}}/key.pem
     -subj '/C=US/ST=WA/O=UW Medicine/CN={{ node_name }}'
     -config {{ca_dir}}/openssl.cfg
     -out {{work_dir}}/{{node_name}}.csr"
