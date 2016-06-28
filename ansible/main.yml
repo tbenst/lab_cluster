@@ -1,7 +1,7 @@
 ---
 - include: migrations.yml
 # TODO
-# - include: certificate-authority.yml
+- include: certificate-authority.yml
 - include: common.yml
 # - include: soft-reset.yml
 - include: consuls.yml
