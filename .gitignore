@@ -1,3 +1,4 @@
 .DS_Store
 *.retry
 ./ansible/roles/certificate-authority/certs/*
+!./ansible/roles/certificate-authority/certs/README
