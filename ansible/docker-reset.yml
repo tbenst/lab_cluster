@@ -12,3 +12,5 @@
     - name: Removing all docker images
       shell: docker rmi $(docker images -q)
       ignore_errors: yes
+    - name: stop docker 
+      service: name=docker state=stopped
