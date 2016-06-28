@@ -38,5 +38,5 @@
     dest: "{{cert_dir}}/cert.pem"
 - name: Transfer node's private key
   copy: 
-    src: "{{ca_filepath}}/{{inventory_hostname}}/{{inventory_hostname}}key.pem"
+    src: "{{ca_filepath}}/{{inventory_hostname}}/key.pem"
     dest: "{{cert_dir}}/key.pem"
