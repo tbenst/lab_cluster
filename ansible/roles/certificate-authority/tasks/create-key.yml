@@ -1,7 +1,7 @@
 - set_fact: "node_ip={{hostvars[node_name].ansible_host}}"
 - set_fact: "san_ip={{node_ip}}"
-- name: Making openssl.cfg from template
-  template: "src=openssl.cfg.j2 dest={{ca_dir}}/openssl.cfg"
+# - name: Making openssl.cfg from template
+#   template: "src=openssl.cfg.j2 dest={{ca_dir}}/openssl.cfg"
 
 - name: "Create directory for {{ node_name }}"
   file: "path={{work_dir}} state=directory"
