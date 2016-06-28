@@ -5,7 +5,7 @@
   docker:
     name: manager
     image: swarm
-    command: "manage --tlsverify --tlscacert=/home/{{ansible_user}}/.certs/ca.pem --tlscert=/home/{{ansible_user}}/.certs/cert.pem --tlskey=/home/{{ansible_user}}/.certs/key.pem -H :4000 --replication --advertise {{ansible_host}}:4000 consul://{{consul0_ip}}:8500"
+    command: "manage --tlsverify --tlscacert=/certs/ca.pem --tlscert=/certs/cert.pem --tlskey=/certs/key.pem -H :4000 --replication --advertise {{ansible_host}}:4000 consul://{{consul0_ip}}:8500"
     state: started
     # state: reloaded
     count: 1
