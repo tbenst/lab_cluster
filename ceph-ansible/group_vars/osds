@@ -115,6 +115,7 @@ osd_auto_discovery: false
 osd_directory: true
 osd_directories:
   - /data
+  - /mnt/data2
 
 
 # V. Fith scenario: this will partition disks for BlueStore
