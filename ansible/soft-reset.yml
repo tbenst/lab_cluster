@@ -1,0 +1,8 @@
+---
+- hosts: workers
+  tasks:
+    - name: Unmount CephFS
+      shell: umount /cephfs
+      become: yes
+
+- include: docker-reset.yml
