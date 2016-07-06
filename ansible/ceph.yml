@@ -14,7 +14,7 @@
       # with_items: "{{ansible_all_ipv4_addresses}}"
       with_items: "{{groups['all']}}"
 
-- hosts: docker
+- hosts: workers
   tasks:
     - shell: mount -t ceph 172.16.37.42:6789:/ /cephfs
       become: yes

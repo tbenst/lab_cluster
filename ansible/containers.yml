@@ -3,14 +3,13 @@
   tags: docker
   
   tasks:
-    # TODO git pull, docker-compose
-    # - name: Starting Eye Candy
-    #   docker:
-    #     name: Eye Candy (experiments)
-    #     image: tbenst/eye-candy
-    #     command: "-server -bootstrap"
-    #     state: started
-    #     count: 1
-    #     ports:
-    #       - 8500:8500
+    # TODO git pull, docker-compose for eye candy
+    - name: Starting Trigger
+      docker:
+        name: Trigger
+        image: tbenst/trigger
+        state: started
+        count: 1
+        ports:
+          - 5000:5000
 
