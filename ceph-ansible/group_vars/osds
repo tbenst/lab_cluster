@@ -116,6 +116,8 @@ osd_directory: true
 osd_directories:
   - /data
   - /mnt/data2
+  - /mnt/data1
+  - /mnt/data0
 
 
 # V. Fith scenario: this will partition disks for BlueStore

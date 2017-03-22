@@ -1,0 +1,515 @@
+[2016-08-25 11:19:47,806][ceph_deploy.conf][DEBUG ] found configuration file at: /home/tyler/.cephdeploy.conf
+[2016-08-25 11:19:47,806][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy install --release jewel 192.168.29.240
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7fc891814b00>
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  username                      : None
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  adjust_repos                  : False
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x7fc8918382a8>
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  host                          : ['192.168.29.240']
+[2016-08-25 11:19:47,807][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  release                       : jewel
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-08-25 11:19:47,808][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-08-25 11:19:47,808][ceph_deploy.install][DEBUG ] Installing stable version jewel on cluster ceph hosts 192.168.29.240
+[2016-08-25 11:19:47,808][ceph_deploy.install][DEBUG ] Detecting platform for host 192.168.29.240 ...
+[2016-08-25 11:19:47,854][ceph_deploy][ERROR ] RuntimeError: connecting to host: 192.168.29.240 resulted in errors: HostNotFound 192.168.29.240
+
+[2016-08-25 11:23:46,599][ceph_deploy.conf][DEBUG ] found configuration file at: /home/tyler/.cephdeploy.conf
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy --username tyler install --release jewel 192.168.29.240
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7ffae66b0b00>
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-08-25 11:23:46,599][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  username                      : tyler
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  adjust_repos                  : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x7ffae66d42a8>
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  host                          : ['192.168.29.240']
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-08-25 11:23:46,600][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-08-25 11:23:46,601][ceph_deploy.cli][INFO  ]  release                       : jewel
+[2016-08-25 11:23:46,601][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-08-25 11:23:46,601][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-08-25 11:23:46,601][ceph_deploy.install][DEBUG ] Installing stable version jewel on cluster ceph hosts 192.168.29.240
+[2016-08-25 11:23:46,601][ceph_deploy.install][DEBUG ] Detecting platform for host 192.168.29.240 ...
+[2016-08-25 11:23:46,634][ceph_deploy][ERROR ] RuntimeError: connecting to host: tyler@192.168.29.240 resulted in errors: HostNotFound tyler@192.168.29.240
+
+[2016-08-25 11:27:23,421][ceph_deploy.conf][DEBUG ] found configuration file at: /home/tyler/.cephdeploy.conf
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy --username tyler install --release jewel 192.168.29.240
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7f60b3726b00>
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  username                      : tyler
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  adjust_repos                  : False
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x7f60b374a2a8>
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-08-25 11:27:23,422][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  host                          : ['192.168.29.240']
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  release                       : jewel
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-08-25 11:27:23,423][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-08-25 11:27:23,423][ceph_deploy.install][DEBUG ] Installing stable version jewel on cluster ceph hosts 192.168.29.240
+[2016-08-25 11:27:23,424][ceph_deploy.install][DEBUG ] Detecting platform for host 192.168.29.240 ...
+[2016-08-25 11:27:29,131][ceph_deploy][ERROR ] RuntimeError: connecting to host: tyler@192.168.29.240 resulted in errors: IOError cannot send (already closed?)
+
+[2016-08-25 11:27:40,690][ceph_deploy.conf][DEBUG ] found configuration file at: /home/tyler/.cephdeploy.conf
+[2016-08-25 11:27:40,690][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy --username tyler install --release jewel 192.168.29.240
+[2016-08-25 11:27:40,690][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-08-25 11:27:40,690][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-08-25 11:27:40,690][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7f86e6b1bb00>
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  username                      : tyler
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  adjust_repos                  : False
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x7f86e6b3f2a8>
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  host                          : ['192.168.29.240']
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-08-25 11:27:40,691][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  release                       : jewel
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-08-25 11:27:40,692][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-08-25 11:27:40,692][ceph_deploy.install][DEBUG ] Installing stable version jewel on cluster ceph hosts 192.168.29.240
+[2016-08-25 11:27:40,692][ceph_deploy.install][DEBUG ] Detecting platform for host 192.168.29.240 ...
+[2016-08-25 11:27:42,857][ceph_deploy][ERROR ] RuntimeError: connecting to host: tyler@192.168.29.240 resulted in errors: IOError cannot send (already closed?)
+
+[2016-08-25 11:42:00,372][ceph_deploy.conf][DEBUG ] found configuration file at: /home/tyler/.cephdeploy.conf
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy --username tyler install --release jewel 192.168.29.240
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7fac8627eb00>
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  username                      : tyler
+[2016-08-25 11:42:00,373][ceph_deploy.cli][INFO  ]  adjust_repos                  : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x7fac862a22a8>
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  host                          : ['192.168.29.240']
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-08-25 11:42:00,374][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-08-25 11:42:00,375][ceph_deploy.cli][INFO  ]  release                       : jewel
+[2016-08-25 11:42:00,375][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-08-25 11:42:00,375][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-08-25 11:42:00,375][ceph_deploy.install][DEBUG ] Installing stable version jewel on cluster ceph hosts 192.168.29.240
+[2016-08-25 11:42:00,375][ceph_deploy.install][DEBUG ] Detecting platform for host 192.168.29.240 ...
+[2016-08-25 11:42:02,555][ceph_deploy][ERROR ] RuntimeError: connecting to host: tyler@192.168.29.240 resulted in errors: IOError cannot send (already closed?)
+
+[2016-08-25 11:42:57,210][ceph_deploy.conf][DEBUG ] found configuration file at: /home/tyler/.cephdeploy.conf
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy --username tyler install --release jewel 192.168.29.240
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7ff28b388b00>
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  username                      : tyler
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  adjust_repos                  : False
+[2016-08-25 11:42:57,211][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x7ff28b3ac2a8>
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  host                          : ['192.168.29.240']
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  release                       : jewel
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-08-25 11:42:57,212][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-08-25 11:42:57,212][ceph_deploy.install][DEBUG ] Installing stable version jewel on cluster ceph hosts 192.168.29.240
+[2016-08-25 11:42:57,212][ceph_deploy.install][DEBUG ] Detecting platform for host 192.168.29.240 ...
+[2016-08-25 11:42:59,527][192.168.29.240][DEBUG ] connection detected need for sudo
+[2016-08-25 11:43:01,772][192.168.29.240][DEBUG ] connected to host: tyler@192.168.29.240 
+[2016-08-25 11:43:01,773][ceph_deploy][ERROR ] RuntimeError: remote connection got closed, ensure ``requiretty`` is disabled for 192.168.29.240
+
+[2016-08-25 11:51:06,908][ceph_deploy.conf][DEBUG ] found configuration file at: /home/tyler/.cephdeploy.conf
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ] Invoked (1.5.32): /usr/bin/ceph-deploy --username superman install --release jewel 192.168.29.240
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  testing                       : None
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x7f15d599eb00>
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  dev_commit                    : None
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  install_mds                   : False
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  stable                        : None
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  default_release               : False
+[2016-08-25 11:51:06,909][ceph_deploy.cli][INFO  ]  username                      : superman
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  adjust_repos                  : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  func                          : <function install at 0x7f15d59c22a8>
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  install_all                   : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  repo                          : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  host                          : ['192.168.29.240']
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  install_rgw                   : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  install_tests                 : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  repo_url                      : None
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  install_osd                   : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  version_kind                  : stable
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  install_common                : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  dev                           : master
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  local_mirror                  : None
+[2016-08-25 11:51:06,910][ceph_deploy.cli][INFO  ]  release                       : jewel
+[2016-08-25 11:51:06,911][ceph_deploy.cli][INFO  ]  install_mon                   : False
+[2016-08-25 11:51:06,911][ceph_deploy.cli][INFO  ]  gpg_url                       : None
+[2016-08-25 11:51:06,911][ceph_deploy.install][DEBUG ] Installing stable version jewel on cluster ceph hosts 192.168.29.240
+[2016-08-25 11:51:06,911][ceph_deploy.install][DEBUG ] Detecting platform for host 192.168.29.240 ...
+[2016-08-25 11:51:18,239][192.168.29.240][DEBUG ] connection detected need for sudo
+[2016-08-25 11:51:27,530][192.168.29.240][DEBUG ] connected to host: superman@192.168.29.240 
+[2016-08-25 11:51:27,531][192.168.29.240][DEBUG ] detect platform information from remote host
+[2016-08-25 11:51:27,588][192.168.29.240][DEBUG ] detect machine type
+[2016-08-25 11:51:27,594][ceph_deploy.install][INFO  ] Distro info: Ubuntu 16.04 xenial
+[2016-08-25 11:51:27,594][192.168.29.240][INFO  ] installing Ceph on 192.168.29.240
+[2016-08-25 11:51:27,597][192.168.29.240][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q --no-install-recommends install ca-certificates apt-transport-https
+[2016-08-25 11:51:27,726][192.168.29.240][DEBUG ] Reading package lists...
+[2016-08-25 11:51:28,040][192.168.29.240][DEBUG ] Building dependency tree...
+[2016-08-25 11:51:28,041][192.168.29.240][DEBUG ] Reading state information...
+[2016-08-25 11:51:28,305][192.168.29.240][DEBUG ] ca-certificates is already the newest version (20160104ubuntu1).
+[2016-08-25 11:51:28,305][192.168.29.240][DEBUG ] apt-transport-https is already the newest version (1.2.12~ubuntu16.04.1).
+[2016-08-25 11:51:28,306][192.168.29.240][DEBUG ] 0 upgraded, 0 newly installed, 0 to remove and 32 not upgraded.
+[2016-08-25 11:51:28,308][192.168.29.240][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q update
+[2016-08-25 11:51:28,629][192.168.29.240][DEBUG ] Hit:1 http://us.archive.ubuntu.com/ubuntu xenial InRelease
+[2016-08-25 11:51:28,629][192.168.29.240][DEBUG ] Hit:2 http://security.ubuntu.com/ubuntu xenial-security InRelease
+[2016-08-25 11:51:28,693][192.168.29.240][DEBUG ] Get:3 http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease [95.7 kB]
+[2016-08-25 11:51:28,958][192.168.29.240][DEBUG ] Hit:4 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease
+[2016-08-25 11:51:29,122][192.168.29.240][DEBUG ] Fetched 95.7 kB in 0s (138 kB/s)
+[2016-08-25 11:51:30,739][192.168.29.240][DEBUG ] Reading package lists...
+[2016-08-25 11:51:30,773][192.168.29.240][INFO  ] Running command: sudo env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get --assume-yes -q --no-install-recommends install -o Dpkg::Options::=--force-confnew ceph ceph-mds radosgw
+[2016-08-25 11:51:30,843][192.168.29.240][DEBUG ] Reading package lists...
+[2016-08-25 11:51:31,157][192.168.29.240][DEBUG ] Building dependency tree...
+[2016-08-25 11:51:31,157][192.168.29.240][DEBUG ] Reading state information...
+[2016-08-25 11:51:31,422][192.168.29.240][DEBUG ] The following additional packages will be installed:
+[2016-08-25 11:51:31,422][192.168.29.240][DEBUG ]   binutils ceph-common gdisk libaio1 libbabeltrace-ctf1 libbabeltrace1
+[2016-08-25 11:51:31,422][192.168.29.240][DEBUG ]   libboost-iostreams1.58.0 libboost-program-options1.58.0
+[2016-08-25 11:51:31,423][192.168.29.240][DEBUG ]   libboost-random1.58.0 libboost-regex1.58.0 libboost-system1.58.0
+[2016-08-25 11:51:31,423][192.168.29.240][DEBUG ]   libboost-thread1.58.0 libcephfs1 libfcgi0ldbl libgoogle-perftools4
+[2016-08-25 11:51:31,423][192.168.29.240][DEBUG ]   libjs-jquery libleveldb1v5 librados2 libradosstriper1 librbd1 librgw2
+[2016-08-25 11:51:31,424][192.168.29.240][DEBUG ]   libsnappy1v5 libtcmalloc-minimal4 libunwind8 python-cephfs python-chardet
+[2016-08-25 11:51:31,424][192.168.29.240][DEBUG ]   python-flask python-itsdangerous python-jinja2 python-markupsafe
+[2016-08-25 11:51:31,424][192.168.29.240][DEBUG ]   python-pkg-resources python-rados python-rbd python-requests python-six
+[2016-08-25 11:51:31,424][192.168.29.240][DEBUG ]   python-urllib3 python-werkzeug
+[2016-08-25 11:51:31,428][192.168.29.240][DEBUG ] Suggested packages:
+[2016-08-25 11:51:31,428][192.168.29.240][DEBUG ]   binutils-doc python-flask-doc python-jinja2-doc python-setuptools
+[2016-08-25 11:51:31,429][192.168.29.240][DEBUG ]   python-ndg-httpsclient python-openssl python-pyasn1 python-ntlm ipython
+[2016-08-25 11:51:31,429][192.168.29.240][DEBUG ]   python-genshi python-lxml python-greenlet python-redis python-pylibmc
+[2016-08-25 11:51:31,429][192.168.29.240][DEBUG ]   | python-memcache python-werkzeug-doc
+[2016-08-25 11:51:31,429][192.168.29.240][DEBUG ] Recommended packages:
+[2016-08-25 11:51:31,429][192.168.29.240][DEBUG ]   ntp | time-daemon | chrony ceph-fs-common ceph-fuse javascript-common
+[2016-08-25 11:51:31,430][192.168.29.240][DEBUG ]   python-blinker python-ndg-httpsclient python-openssl python-pyasn1
+[2016-08-25 11:51:31,430][192.168.29.240][DEBUG ]   python-pyinotify
+[2016-08-25 11:51:31,431][192.168.29.240][DEBUG ] The following NEW packages will be installed:
+[2016-08-25 11:51:31,432][192.168.29.240][DEBUG ]   binutils ceph ceph-common ceph-mds gdisk libaio1 libbabeltrace-ctf1
+[2016-08-25 11:51:31,433][192.168.29.240][DEBUG ]   libbabeltrace1 libboost-iostreams1.58.0 libboost-program-options1.58.0
+[2016-08-25 11:51:31,433][192.168.29.240][DEBUG ]   libboost-random1.58.0 libboost-regex1.58.0 libboost-system1.58.0
+[2016-08-25 11:51:31,433][192.168.29.240][DEBUG ]   libboost-thread1.58.0 libcephfs1 libfcgi0ldbl libgoogle-perftools4
+[2016-08-25 11:51:31,433][192.168.29.240][DEBUG ]   libjs-jquery libleveldb1v5 librados2 libradosstriper1 librbd1 librgw2
+[2016-08-25 11:51:31,434][192.168.29.240][DEBUG ]   libsnappy1v5 libtcmalloc-minimal4 libunwind8 python-cephfs python-chardet
+[2016-08-25 11:51:31,434][192.168.29.240][DEBUG ]   python-flask python-itsdangerous python-jinja2 python-markupsafe
+[2016-08-25 11:51:31,434][192.168.29.240][DEBUG ]   python-pkg-resources python-rados python-rbd python-requests python-six
+[2016-08-25 11:51:31,434][192.168.29.240][DEBUG ]   python-urllib3 python-werkzeug radosgw
+[2016-08-25 11:51:31,749][192.168.29.240][DEBUG ] 0 upgraded, 40 newly installed, 0 to remove and 32 not upgraded.
+[2016-08-25 11:51:31,749][192.168.29.240][DEBUG ] Need to get 44.7 MB of archives.
+[2016-08-25 11:51:31,749][192.168.29.240][DEBUG ] After this operation, 196 MB of additional disk space will be used.
+[2016-08-25 11:51:31,749][192.168.29.240][DEBUG ] Get:1 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils amd64 2.26.1-1ubuntu1~16.04.3 [2,310 kB]
+[2016-08-25 11:51:32,665][192.168.29.240][DEBUG ] Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-iostreams1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [29.0 kB]
+[2016-08-25 11:51:32,665][192.168.29.240][DEBUG ] Get:3 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-system1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [9,146 B]
+[2016-08-25 11:51:32,665][192.168.29.240][DEBUG ] Get:4 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-random1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [11.7 kB]
+[2016-08-25 11:51:32,666][192.168.29.240][DEBUG ] Get:5 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-thread1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [47.0 kB]
+[2016-08-25 11:51:32,666][192.168.29.240][DEBUG ] Get:6 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 librados2 amd64 10.2.2-0ubuntu0.16.04.2 [1,633 kB]
+[2016-08-25 11:51:33,030][192.168.29.240][DEBUG ] Get:7 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 librbd1 amd64 10.2.2-0ubuntu0.16.04.2 [2,109 kB]
+[2016-08-25 11:51:33,295][192.168.29.240][DEBUG ] Get:8 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcephfs1 amd64 10.2.2-0ubuntu0.16.04.2 [1,831 kB]
+[2016-08-25 11:51:33,559][192.168.29.240][DEBUG ] Get:9 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-cephfs amd64 10.2.2-0ubuntu0.16.04.2 [222 kB]
+[2016-08-25 11:51:33,559][192.168.29.240][DEBUG ] Get:10 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-rados amd64 10.2.2-0ubuntu0.16.04.2 [648 kB]
+[2016-08-25 11:51:33,623][192.168.29.240][DEBUG ] Get:11 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-rbd amd64 10.2.2-0ubuntu0.16.04.2 [303 kB]
+[2016-08-25 11:51:33,687][192.168.29.240][DEBUG ] Get:12 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-six all 1.10.0-3 [10.9 kB]
+[2016-08-25 11:51:33,687][192.168.29.240][DEBUG ] Get:13 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-urllib3 all 1.13.1-2ubuntu0.16.04.1 [57.2 kB]
+[2016-08-25 11:51:33,687][192.168.29.240][DEBUG ] Get:14 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-pkg-resources all 20.7.0-1 [108 kB]
+[2016-08-25 11:51:33,691][192.168.29.240][DEBUG ] Get:15 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-chardet all 2.3.0-2 [96.3 kB]
+[2016-08-25 11:51:33,706][192.168.29.240][DEBUG ] Get:16 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-requests all 2.9.1-3 [55.6 kB]
+[2016-08-25 11:51:33,707][192.168.29.240][DEBUG ] Get:17 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libbabeltrace1 amd64 1.3.2-1 [34.7 kB]
+[2016-08-25 11:51:33,710][192.168.29.240][DEBUG ] Get:18 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libbabeltrace-ctf1 amd64 1.3.2-1 [88.3 kB]
+[2016-08-25 11:51:33,718][192.168.29.240][DEBUG ] Get:19 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-program-options1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [138 kB]
+[2016-08-25 11:51:33,832][192.168.29.240][DEBUG ] Get:20 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-regex1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [261 kB]
+[2016-08-25 11:51:33,832][192.168.29.240][DEBUG ] Get:21 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libradosstriper1 amd64 10.2.2-0ubuntu0.16.04.2 [1,865 kB]
+[2016-08-25 11:51:34,146][192.168.29.240][DEBUG ] Get:22 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libfcgi0ldbl amd64 2.4.0-8.3 [161 kB]
+[2016-08-25 11:51:34,146][192.168.29.240][DEBUG ] Get:23 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 librgw2 amd64 10.2.2-0ubuntu0.16.04.2 [2,812 kB]
+[2016-08-25 11:51:34,661][192.168.29.240][DEBUG ] Get:24 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 ceph-common amd64 10.2.2-0ubuntu0.16.04.2 [5,421 kB]
+[2016-08-25 11:51:35,526][192.168.29.240][DEBUG ] Get:25 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 gdisk amd64 1.0.1-1build1 [194 kB]
+[2016-08-25 11:51:35,527][192.168.29.240][DEBUG ] Get:26 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-itsdangerous all 0.24+dfsg1-1 [12.0 kB]
+[2016-08-25 11:51:35,527][192.168.29.240][DEBUG ] Get:27 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-markupsafe amd64 0.23-2build2 [15.5 kB]
+[2016-08-25 11:51:35,542][192.168.29.240][DEBUG ] Get:28 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-jinja2 all 2.8-1 [109 kB]
+[2016-08-25 11:51:35,574][192.168.29.240][DEBUG ] Get:29 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libjs-jquery all 1.11.3+dfsg-4 [161 kB]
+[2016-08-25 11:51:35,582][192.168.29.240][DEBUG ] Get:30 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-werkzeug all 0.10.4+dfsg1-1ubuntu1 [162 kB]
+[2016-08-25 11:51:35,597][192.168.29.240][DEBUG ] Get:31 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python-flask all 0.10.1-2build2 [51.8 kB]
+[2016-08-25 11:51:35,605][192.168.29.240][DEBUG ] Get:32 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libaio1 amd64 0.3.110-2 [6,356 B]
+[2016-08-25 11:51:35,605][192.168.29.240][DEBUG ] Get:33 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libtcmalloc-minimal4 amd64 2.4-0ubuntu5 [105 kB]
+[2016-08-25 11:51:35,637][192.168.29.240][DEBUG ] Get:34 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libunwind8 amd64 1.1-4.1 [46.5 kB]
+[2016-08-25 11:51:35,701][192.168.29.240][DEBUG ] Get:35 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libgoogle-perftools4 amd64 2.4-0ubuntu5 [187 kB]
+[2016-08-25 11:51:35,701][192.168.29.240][DEBUG ] Get:36 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libsnappy1v5 amd64 1.1.3-2 [16.0 kB]
+[2016-08-25 11:51:35,701][192.168.29.240][DEBUG ] Get:37 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 libleveldb1v5 amd64 1.18-5 [132 kB]
+[2016-08-25 11:51:35,709][192.168.29.240][DEBUG ] Get:38 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 ceph amd64 10.2.2-0ubuntu0.16.04.2 [12.7 MB]
+[2016-08-25 11:51:37,676][192.168.29.240][DEBUG ] Get:39 http://us.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 ceph-mds amd64 10.2.2-0ubuntu0.16.04.2 [10.2 MB]
+[2016-08-25 11:51:39,143][192.168.29.240][DEBUG ] Get:40 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 radosgw amd64 10.2.2-0ubuntu0.16.04.2 [251 kB]
+[2016-08-25 11:51:39,508][192.168.29.240][WARNING] Extracting templates from packages: 75%Extracting templates from packages: 100%
+[2016-08-25 11:51:39,515][192.168.29.240][DEBUG ] Fetched 44.7 MB in 7s (5,815 kB/s)
+[2016-08-25 11:51:39,730][192.168.29.240][DEBUG ] Selecting previously unselected package binutils.
+[2016-08-25 11:51:39,737][192.168.29.240][DEBUG ] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60307 files and directories currently installed.)
+[2016-08-25 11:51:39,738][192.168.29.240][DEBUG ] Preparing to unpack .../binutils_2.26.1-1ubuntu1~16.04.3_amd64.deb ...
+[2016-08-25 11:51:39,901][192.168.29.240][DEBUG ] Unpacking binutils (2.26.1-1ubuntu1~16.04.3) ...
+[2016-08-25 11:51:40,917][192.168.29.240][DEBUG ] Selecting previously unselected package libboost-iostreams1.58.0:amd64.
+[2016-08-25 11:51:40,917][192.168.29.240][DEBUG ] Preparing to unpack .../libboost-iostreams1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+[2016-08-25 11:51:40,981][192.168.29.240][DEBUG ] Unpacking libboost-iostreams1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:51:41,446][192.168.29.240][DEBUG ] Selecting previously unselected package libboost-system1.58.0:amd64.
+[2016-08-25 11:51:41,446][192.168.29.240][DEBUG ] Preparing to unpack .../libboost-system1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+[2016-08-25 11:51:41,510][192.168.29.240][DEBUG ] Unpacking libboost-system1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:51:41,975][192.168.29.240][DEBUG ] Selecting previously unselected package libboost-random1.58.0:amd64.
+[2016-08-25 11:51:41,975][192.168.29.240][DEBUG ] Preparing to unpack .../libboost-random1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+[2016-08-25 11:51:42,039][192.168.29.240][DEBUG ] Unpacking libboost-random1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:51:42,504][192.168.29.240][DEBUG ] Selecting previously unselected package libboost-thread1.58.0:amd64.
+[2016-08-25 11:51:42,504][192.168.29.240][DEBUG ] Preparing to unpack .../libboost-thread1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+[2016-08-25 11:51:42,568][192.168.29.240][DEBUG ] Unpacking libboost-thread1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:51:43,183][192.168.29.240][DEBUG ] Selecting previously unselected package librados2.
+[2016-08-25 11:51:43,183][192.168.29.240][DEBUG ] Preparing to unpack .../librados2_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:43,215][192.168.29.240][DEBUG ] Unpacking librados2 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:43,980][192.168.29.240][DEBUG ] Selecting previously unselected package librbd1.
+[2016-08-25 11:51:43,980][192.168.29.240][DEBUG ] Preparing to unpack .../librbd1_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:44,012][192.168.29.240][DEBUG ] Unpacking librbd1 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:44,777][192.168.29.240][DEBUG ] Selecting previously unselected package libcephfs1.
+[2016-08-25 11:51:44,778][192.168.29.240][DEBUG ] Preparing to unpack .../libcephfs1_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:44,842][192.168.29.240][DEBUG ] Unpacking libcephfs1 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:45,607][192.168.29.240][DEBUG ] Selecting previously unselected package python-cephfs.
+[2016-08-25 11:51:45,607][192.168.29.240][DEBUG ] Preparing to unpack .../python-cephfs_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:45,639][192.168.29.240][DEBUG ] Unpacking python-cephfs (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:46,053][192.168.29.240][DEBUG ] Selecting previously unselected package python-rados.
+[2016-08-25 11:51:46,054][192.168.29.240][DEBUG ] Preparing to unpack .../python-rados_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:46,118][192.168.29.240][DEBUG ] Unpacking python-rados (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:46,582][192.168.29.240][DEBUG ] Selecting previously unselected package python-rbd.
+[2016-08-25 11:51:46,583][192.168.29.240][DEBUG ] Preparing to unpack .../python-rbd_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:46,647][192.168.29.240][DEBUG ] Unpacking python-rbd (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:47,161][192.168.29.240][DEBUG ] Selecting previously unselected package python-six.
+[2016-08-25 11:51:47,162][192.168.29.240][DEBUG ] Preparing to unpack .../python-six_1.10.0-3_all.deb ...
+[2016-08-25 11:51:47,225][192.168.29.240][DEBUG ] Unpacking python-six (1.10.0-3) ...
+[2016-08-25 11:51:47,740][192.168.29.240][DEBUG ] Selecting previously unselected package python-urllib3.
+[2016-08-25 11:51:47,740][192.168.29.240][DEBUG ] Preparing to unpack .../python-urllib3_1.13.1-2ubuntu0.16.04.1_all.deb ...
+[2016-08-25 11:51:47,804][192.168.29.240][DEBUG ] Unpacking python-urllib3 (1.13.1-2ubuntu0.16.04.1) ...
+[2016-08-25 11:51:48,269][192.168.29.240][DEBUG ] Selecting previously unselected package python-pkg-resources.
+[2016-08-25 11:51:48,269][192.168.29.240][DEBUG ] Preparing to unpack .../python-pkg-resources_20.7.0-1_all.deb ...
+[2016-08-25 11:51:48,333][192.168.29.240][DEBUG ] Unpacking python-pkg-resources (20.7.0-1) ...
+[2016-08-25 11:51:48,848][192.168.29.240][DEBUG ] Selecting previously unselected package python-chardet.
+[2016-08-25 11:51:48,848][192.168.29.240][DEBUG ] Preparing to unpack .../python-chardet_2.3.0-2_all.deb ...
+[2016-08-25 11:51:49,363][192.168.29.240][DEBUG ] Unpacking python-chardet (2.3.0-2) ...
+[2016-08-25 11:51:49,928][192.168.29.240][DEBUG ] Selecting previously unselected package python-requests.
+[2016-08-25 11:51:49,928][192.168.29.240][DEBUG ] Preparing to unpack .../python-requests_2.9.1-3_all.deb ...
+[2016-08-25 11:51:49,992][192.168.29.240][DEBUG ] Unpacking python-requests (2.9.1-3) ...
+[2016-08-25 11:51:50,557][192.168.29.240][DEBUG ] Selecting previously unselected package libbabeltrace1:amd64.
+[2016-08-25 11:51:50,557][192.168.29.240][DEBUG ] Preparing to unpack .../libbabeltrace1_1.3.2-1_amd64.deb ...
+[2016-08-25 11:51:50,621][192.168.29.240][DEBUG ] Unpacking libbabeltrace1:amd64 (1.3.2-1) ...
+[2016-08-25 11:51:51,136][192.168.29.240][DEBUG ] Selecting previously unselected package libbabeltrace-ctf1:amd64.
+[2016-08-25 11:51:51,136][192.168.29.240][DEBUG ] Preparing to unpack .../libbabeltrace-ctf1_1.3.2-1_amd64.deb ...
+[2016-08-25 11:51:51,200][192.168.29.240][DEBUG ] Unpacking libbabeltrace-ctf1:amd64 (1.3.2-1) ...
+[2016-08-25 11:51:51,715][192.168.29.240][DEBUG ] Selecting previously unselected package libboost-program-options1.58.0:amd64.
+[2016-08-25 11:51:51,715][192.168.29.240][DEBUG ] Preparing to unpack .../libboost-program-options1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+[2016-08-25 11:51:51,779][192.168.29.240][DEBUG ] Unpacking libboost-program-options1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:51:52,243][192.168.29.240][DEBUG ] Selecting previously unselected package libboost-regex1.58.0:amd64.
+[2016-08-25 11:51:52,244][192.168.29.240][DEBUG ] Preparing to unpack .../libboost-regex1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+[2016-08-25 11:51:52,307][192.168.29.240][DEBUG ] Unpacking libboost-regex1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:51:52,872][192.168.29.240][DEBUG ] Selecting previously unselected package libradosstriper1.
+[2016-08-25 11:51:52,873][192.168.29.240][DEBUG ] Preparing to unpack .../libradosstriper1_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:52,937][192.168.29.240][DEBUG ] Unpacking libradosstriper1 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:53,652][192.168.29.240][DEBUG ] Selecting previously unselected package libfcgi0ldbl.
+[2016-08-25 11:51:53,652][192.168.29.240][DEBUG ] Preparing to unpack .../libfcgi0ldbl_2.4.0-8.3_amd64.deb ...
+[2016-08-25 11:51:53,766][192.168.29.240][DEBUG ] Unpacking libfcgi0ldbl (2.4.0-8.3) ...
+[2016-08-25 11:51:54,231][192.168.29.240][DEBUG ] Selecting previously unselected package librgw2.
+[2016-08-25 11:51:54,231][192.168.29.240][DEBUG ] Preparing to unpack .../librgw2_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:54,263][192.168.29.240][DEBUG ] Unpacking librgw2 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:55,228][192.168.29.240][DEBUG ] Selecting previously unselected package ceph-common.
+[2016-08-25 11:51:55,229][192.168.29.240][DEBUG ] Preparing to unpack .../ceph-common_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:51:55,293][192.168.29.240][DEBUG ] Unpacking ceph-common (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:51:56,659][192.168.29.240][DEBUG ] Selecting previously unselected package gdisk.
+[2016-08-25 11:51:56,659][192.168.29.240][DEBUG ] Preparing to unpack .../gdisk_1.0.1-1build1_amd64.deb ...
+[2016-08-25 11:51:56,723][192.168.29.240][DEBUG ] Unpacking gdisk (1.0.1-1build1) ...
+[2016-08-25 11:51:57,238][192.168.29.240][DEBUG ] Selecting previously unselected package python-itsdangerous.
+[2016-08-25 11:51:57,238][192.168.29.240][DEBUG ] Preparing to unpack .../python-itsdangerous_0.24+dfsg1-1_all.deb ...
+[2016-08-25 11:51:57,302][192.168.29.240][DEBUG ] Unpacking python-itsdangerous (0.24+dfsg1-1) ...
+[2016-08-25 11:51:57,767][192.168.29.240][DEBUG ] Selecting previously unselected package python-markupsafe.
+[2016-08-25 11:51:57,767][192.168.29.240][DEBUG ] Preparing to unpack .../python-markupsafe_0.23-2build2_amd64.deb ...
+[2016-08-25 11:51:57,831][192.168.29.240][DEBUG ] Unpacking python-markupsafe (0.23-2build2) ...
+[2016-08-25 11:51:58,295][192.168.29.240][DEBUG ] Selecting previously unselected package python-jinja2.
+[2016-08-25 11:51:58,296][192.168.29.240][DEBUG ] Preparing to unpack .../python-jinja2_2.8-1_all.deb ...
+[2016-08-25 11:51:58,360][192.168.29.240][DEBUG ] Unpacking python-jinja2 (2.8-1) ...
+[2016-08-25 11:51:58,874][192.168.29.240][DEBUG ] Selecting previously unselected package libjs-jquery.
+[2016-08-25 11:51:58,875][192.168.29.240][DEBUG ] Preparing to unpack .../libjs-jquery_1.11.3+dfsg-4_all.deb ...
+[2016-08-25 11:51:58,939][192.168.29.240][DEBUG ] Unpacking libjs-jquery (1.11.3+dfsg-4) ...
+[2016-08-25 11:51:59,453][192.168.29.240][DEBUG ] Selecting previously unselected package python-werkzeug.
+[2016-08-25 11:51:59,454][192.168.29.240][DEBUG ] Preparing to unpack .../python-werkzeug_0.10.4+dfsg1-1ubuntu1_all.deb ...
+[2016-08-25 11:51:59,518][192.168.29.240][DEBUG ] Unpacking python-werkzeug (0.10.4+dfsg1-1ubuntu1) ...
+[2016-08-25 11:52:00,082][192.168.29.240][DEBUG ] Selecting previously unselected package python-flask.
+[2016-08-25 11:52:00,083][192.168.29.240][DEBUG ] Preparing to unpack .../python-flask_0.10.1-2build2_all.deb ...
+[2016-08-25 11:52:00,147][192.168.29.240][DEBUG ] Unpacking python-flask (0.10.1-2build2) ...
+[2016-08-25 11:52:00,712][192.168.29.240][DEBUG ] Selecting previously unselected package libaio1:amd64.
+[2016-08-25 11:52:00,712][192.168.29.240][DEBUG ] Preparing to unpack .../libaio1_0.3.110-2_amd64.deb ...
+[2016-08-25 11:52:00,744][192.168.29.240][DEBUG ] Unpacking libaio1:amd64 (0.3.110-2) ...
+[2016-08-25 11:52:01,158][192.168.29.240][DEBUG ] Selecting previously unselected package libtcmalloc-minimal4.
+[2016-08-25 11:52:01,159][192.168.29.240][DEBUG ] Preparing to unpack .../libtcmalloc-minimal4_2.4-0ubuntu5_amd64.deb ...
+[2016-08-25 11:52:01,223][192.168.29.240][DEBUG ] Unpacking libtcmalloc-minimal4 (2.4-0ubuntu5) ...
+[2016-08-25 11:52:01,738][192.168.29.240][DEBUG ] Selecting previously unselected package libunwind8.
+[2016-08-25 11:52:01,738][192.168.29.240][DEBUG ] Preparing to unpack .../libunwind8_1.1-4.1_amd64.deb ...
+[2016-08-25 11:52:01,770][192.168.29.240][DEBUG ] Unpacking libunwind8 (1.1-4.1) ...
+[2016-08-25 11:52:02,284][192.168.29.240][DEBUG ] Selecting previously unselected package libgoogle-perftools4.
+[2016-08-25 11:52:02,285][192.168.29.240][DEBUG ] Preparing to unpack .../libgoogle-perftools4_2.4-0ubuntu5_amd64.deb ...
+[2016-08-25 11:52:02,349][192.168.29.240][DEBUG ] Unpacking libgoogle-perftools4 (2.4-0ubuntu5) ...
+[2016-08-25 11:52:02,863][192.168.29.240][DEBUG ] Selecting previously unselected package libsnappy1v5:amd64.
+[2016-08-25 11:52:02,864][192.168.29.240][DEBUG ] Preparing to unpack .../libsnappy1v5_1.1.3-2_amd64.deb ...
+[2016-08-25 11:52:02,928][192.168.29.240][DEBUG ] Unpacking libsnappy1v5:amd64 (1.1.3-2) ...
+[2016-08-25 11:52:03,392][192.168.29.240][DEBUG ] Selecting previously unselected package libleveldb1v5:amd64.
+[2016-08-25 11:52:03,392][192.168.29.240][DEBUG ] Preparing to unpack .../libleveldb1v5_1.18-5_amd64.deb ...
+[2016-08-25 11:52:03,424][192.168.29.240][DEBUG ] Unpacking libleveldb1v5:amd64 (1.18-5) ...
+[2016-08-25 11:52:04,891][192.168.29.240][DEBUG ] Selecting previously unselected package ceph.
+[2016-08-25 11:52:04,891][192.168.29.240][DEBUG ] Preparing to unpack .../ceph_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:52:04,923][192.168.29.240][DEBUG ] Unpacking ceph (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:07,092][192.168.29.240][DEBUG ] Selecting previously unselected package ceph-mds.
+[2016-08-25 11:52:07,092][192.168.29.240][DEBUG ] Preparing to unpack .../ceph-mds_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:52:07,156][192.168.29.240][DEBUG ] Unpacking ceph-mds (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:08,723][192.168.29.240][DEBUG ] Selecting previously unselected package radosgw.
+[2016-08-25 11:52:08,723][192.168.29.240][DEBUG ] Preparing to unpack .../radosgw_10.2.2-0ubuntu0.16.04.2_amd64.deb ...
+[2016-08-25 11:52:08,787][192.168.29.240][DEBUG ] Unpacking radosgw (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:09,151][192.168.29.240][DEBUG ] Processing triggers for libc-bin (2.23-0ubuntu3) ...
+[2016-08-25 11:52:09,415][192.168.29.240][DEBUG ] Processing triggers for man-db (2.7.5-1) ...
+[2016-08-25 11:52:10,181][192.168.29.240][DEBUG ] Processing triggers for systemd (229-4ubuntu7) ...
+[2016-08-25 11:52:10,395][192.168.29.240][DEBUG ] Processing triggers for ureadahead (0.100.0-19) ...
+[2016-08-25 11:52:10,459][192.168.29.240][DEBUG ] ureadahead will be reprofiled on next reboot
+[2016-08-25 11:52:10,973][192.168.29.240][DEBUG ] Setting up binutils (2.26.1-1ubuntu1~16.04.3) ...
+[2016-08-25 11:52:11,238][192.168.29.240][DEBUG ] Setting up libboost-iostreams1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:52:11,452][192.168.29.240][DEBUG ] Setting up libboost-system1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:52:11,616][192.168.29.240][DEBUG ] Setting up libboost-random1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:52:11,780][192.168.29.240][DEBUG ] Setting up libboost-thread1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:52:11,994][192.168.29.240][DEBUG ] Setting up librados2 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:12,158][192.168.29.240][DEBUG ] Setting up librbd1 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:12,322][192.168.29.240][DEBUG ] Setting up libcephfs1 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:12,536][192.168.29.240][DEBUG ] Setting up python-cephfs (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:12,751][192.168.29.240][DEBUG ] Setting up python-rados (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:12,965][192.168.29.240][DEBUG ] Setting up python-rbd (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:13,129][192.168.29.240][DEBUG ] Setting up python-six (1.10.0-3) ...
+[2016-08-25 11:52:13,443][192.168.29.240][DEBUG ] Setting up python-urllib3 (1.13.1-2ubuntu0.16.04.1) ...
+[2016-08-25 11:52:13,708][192.168.29.240][DEBUG ] Setting up python-pkg-resources (20.7.0-1) ...
+[2016-08-25 11:52:14,022][192.168.29.240][DEBUG ] Setting up python-chardet (2.3.0-2) ...
+[2016-08-25 11:52:14,487][192.168.29.240][DEBUG ] Setting up python-requests (2.9.1-3) ...
+[2016-08-25 11:52:14,751][192.168.29.240][DEBUG ] Setting up libbabeltrace1:amd64 (1.3.2-1) ...
+[2016-08-25 11:52:14,915][192.168.29.240][DEBUG ] Setting up libbabeltrace-ctf1:amd64 (1.3.2-1) ...
+[2016-08-25 11:52:15,079][192.168.29.240][DEBUG ] Setting up libboost-program-options1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:52:15,243][192.168.29.240][DEBUG ] Setting up libboost-regex1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+[2016-08-25 11:52:15,508][192.168.29.240][DEBUG ] Setting up libradosstriper1 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:15,672][192.168.29.240][DEBUG ] Setting up libfcgi0ldbl (2.4.0-8.3) ...
+[2016-08-25 11:52:15,936][192.168.29.240][DEBUG ] Setting up librgw2 (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:16,100][192.168.29.240][DEBUG ] Setting up ceph-common (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:17,918][192.168.29.240][DEBUG ] [/usr/lib/tmpfiles.d/var.conf:14] Duplicate line for path "/var/log", ignoring.
+[2016-08-25 11:52:18,432][192.168.29.240][DEBUG ] Setting up gdisk (1.0.1-1build1) ...
+[2016-08-25 11:52:18,596][192.168.29.240][DEBUG ] Setting up python-itsdangerous (0.24+dfsg1-1) ...
+[2016-08-25 11:52:18,860][192.168.29.240][DEBUG ] Setting up python-markupsafe (0.23-2build2) ...
+[2016-08-25 11:52:19,576][192.168.29.240][DEBUG ] Setting up python-jinja2 (2.8-1) ...
+[2016-08-25 11:52:19,940][192.168.29.240][DEBUG ] Setting up libjs-jquery (1.11.3+dfsg-4) ...
+[2016-08-25 11:52:20,104][192.168.29.240][DEBUG ] Setting up python-werkzeug (0.10.4+dfsg1-1ubuntu1) ...
+[2016-08-25 11:52:20,469][192.168.29.240][DEBUG ] Setting up python-flask (0.10.1-2build2) ...
+[2016-08-25 11:52:20,733][192.168.29.240][DEBUG ] Setting up libaio1:amd64 (0.3.110-2) ...
+[2016-08-25 11:52:20,897][192.168.29.240][DEBUG ] Setting up libtcmalloc-minimal4 (2.4-0ubuntu5) ...
+[2016-08-25 11:52:21,061][192.168.29.240][DEBUG ] Setting up libunwind8 (1.1-4.1) ...
+[2016-08-25 11:52:21,276][192.168.29.240][DEBUG ] Setting up libgoogle-perftools4 (2.4-0ubuntu5) ...
+[2016-08-25 11:52:21,440][192.168.29.240][DEBUG ] Setting up libsnappy1v5:amd64 (1.1.3-2) ...
+[2016-08-25 11:52:21,654][192.168.29.240][DEBUG ] Setting up libleveldb1v5:amd64 (1.18-5) ...
+[2016-08-25 11:52:21,918][192.168.29.240][DEBUG ] Setting up ceph (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:23,435][192.168.29.240][DEBUG ] Setting up ceph-mds (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:24,050][192.168.29.240][DEBUG ] Setting up radosgw (10.2.2-0ubuntu0.16.04.2) ...
+[2016-08-25 11:52:24,715][192.168.29.240][DEBUG ] Processing triggers for libc-bin (2.23-0ubuntu3) ...
+[2016-08-25 11:52:25,030][192.168.29.240][DEBUG ] Processing triggers for systemd (229-4ubuntu7) ...
+[2016-08-25 11:52:25,194][192.168.29.240][DEBUG ] Processing triggers for ureadahead (0.100.0-19) ...
+[2016-08-25 11:52:27,314][192.168.29.240][INFO  ] Running command: sudo ceph --version
+[2016-08-25 11:52:27,433][192.168.29.240][DEBUG ] ceph version 10.2.2 (45107e21c568dd033c2f0a3107dec8f0b0e58374)
